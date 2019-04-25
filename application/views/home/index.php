@@ -33,7 +33,7 @@
         color-on-scroll="100">
         <div class=" container">
             <div class="navbar-translate">
-                <a class="navbar-brand" href="#">Nelayan Belajar</a>
+                <a class="navbar-brand" href="http://localhost/INF206-2019-A/">Nelayan Belajar</a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" aria-expanded="false"
                     aria-label="Toggle navigation">
                     <span class="sr-only">Toggle navigation</span>
@@ -66,7 +66,9 @@
                 </form>
 
                 <div class="btn-group nav-item navbar-nav">
-                    <button class="btn bg-transparent btn-round" style="border:thick; color: grey;">Sign Up</button>
+                    <a href="http://localhost/INF206-2019-A/assets/akun/login.php">
+                       <button class="btn bg-transparent btn-round" style="border:thick; color: grey;">Masuk</button>
+                    </a>
                 </div>
             </div>
         </div>
@@ -81,8 +83,7 @@
                 <div class="col-md-8 ml-auto mr-auto">
                     <div class="brand text-center">
                         <h1>Nelayan Belajar</h1>
-                        <h3 class="title text-center">"Neque porro quisquam est qui dolorem ipsum quia dolor sit amet,
-                            consectetur, adipisci velit..."</h3>
+                        <h3 class="title text-center">"Temukan Solusi Masalah Aktivitas Nelayan Disini"</h3>
                     </div>
                 </div>
             </div>
