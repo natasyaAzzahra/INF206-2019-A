@@ -177,15 +177,7 @@
                 </div>
                 <div class="col-lg-5 ">
                     <h3 class="text-dark font-weight-light">Peraturan UU</h3>
-                    <p class="text-dark mt-4 text-justify">Lorem Ipsum is simply dummy text of the printing
-                        and typesetting industry.
-                        Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown
-                        printer took a galley of type and scrambled it to make a type specimen book. It has survived
-                        not
-                        only five centuries, but also the leap into electronic typesetting, remaining essentially
-                        unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem
-                        Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker
-                        including versions of Lorem Ipsum
+                    <p class="text-dark mt-4 text-justify"> Peraturan UU sangat penting kaitannya bagi kehidupan nelayan, setiap nelayan harusnya mengetahui hal penting untuk diketahui mengenai mekanisme melaut. fitur ini menyajikan berbagai peraturan undang-undang yang penting diketahui oleh para nelayan seperti cara menangkap ikan yang benar guna menjaga kelestarian dan tidak melakukan hal-hal yang bisa merusak kelestarian laut serta banyak lagi peraturan penting lainnya yang harus diketahui sebagai seorang nelayan. fitur ini disajikan secara sederhana dan mudah dipahami bagi pihak yang menggunakannya. 
                     </p>
                     <a href="#" class="btn btn-dark mt-4">Read More</a>
                 </div>
