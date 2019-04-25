@@ -256,6 +256,7 @@
 						anggota forum nelayan. Sehingga dengan adanya forum akan membuat metode diskusi menjadi lebih
 						baik.
 
+<<<<<<< HEAD
 					</p>
 					<a href="#" class="btn btn-dark mt-4">Read More</a>
 				</div>
@@ -295,6 +296,47 @@
 		</div>
 	</div>
 	<!-- end of Content -->
+=======
+                    </p>
+                    <a href="#" class="btn btn-dark mt-4">Read More</a>
+                </div>
+                <div class="col-lg-5">
+                    <div class="section text-center">
+                        <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                            <ol class="carousel-indicators">
+                                <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                                <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                                <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                            </ol>
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <img class="d-block w-100" src="https://i.imgur.com/yYWlL6i.jpg" alt="First slide">
+                                </div>
+                                <div class="carousel-item">
+                                    <img class="d-block w-100" src="../../../assets/img/bg3.jpg" alt="Second slide">
+                                </div>
+                                <div class="carousel-item">
+                                    <img class="d-block w-100" src="../../../assets/img/bg.jpg" alt="Third slide">
+                                </div>
+                            </div>
+                            <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button"
+                                data-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="sr-only">Previous</span>
+                            </a>
+                            <a class="carousel-control-next" href="#carouselExampleIndicators" role="button"
+                                data-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="sr-only">Next</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- end of Content -->
+>>>>>>> 2701a5e741a3d0aa03a99573053e4715f5f4e71e
 
 	<!-- Footer -->
 	<footer class="footer">
