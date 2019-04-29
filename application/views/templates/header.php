@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-	<title>Nelayan Belajar</title>
+	<title><?=$data?></title>
 	<!--     Fonts and icons     -->
 	<link rel="stylesheet" type="text/css"
 		href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons" />
@@ -10,25 +10,12 @@
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
 		integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
 	<!-- Material Kit CSS -->
-	<link href="assets/css/material-kit.css?v=2.0.5" rel="stylesheet" />
-	<link rel="stylesheet" href="style.css">
-	<style>
-		.place {
-			color: white;
-		}
-
-		#tombol {
-			margin-left: 10px;
-			border-radius: 100%;
-			height: 40px;
-			width: 40px;
-		}
-
-	</style>
+	<link href="<?= base_url();?>assets/css/material-kit.css?v=2.0.5" rel="stylesheet" />
+	<link rel="stylesheet" href="<?= base_url();?>assets/css/style.css">
 </head>
 
-<body>	
-    <!-- navbar -->
+<body>
+	<!-- navbar -->
 	<nav class="navbar navbar-transparent bg-dark navbar-color-on-scroll fixed-top navbar-expand-lg"
 		color-on-scroll="100">
 		<div class=" container">
@@ -66,31 +53,27 @@
 				</form>
 
 				<div class="btn-group nav-item navbar-nav">
-					<a href="http://localhost/INF206-2019-A/assets/akun/login.php">
+					<a href="<?= base_url();?>index.php/welcome/login">
 						<button class="btn bg-transparent btn-round" style="border:thick; color: grey;">Masuk</button>
 					</a>
 				</div>
 			</div>
 		</div>
 	</nav>
-    <!-- end of navbar -->
+	<!-- end of navbar -->
 
-    <!-- textarea -->
+	<!-- textarea -->
 	<div class="page-header header-filter" data-parallax="true"
 		style="background-image: url('https://i.imgur.com/b8LbQU3.jpg')">
 		<div class="container">
 			<div class="row">
 				<div class="col-md-8 ml-auto mr-auto">
 					<div class="brand text-center">
-						<h1>Nelayan Belajar</h1>
-						<h3 class="title text-center">"Temukan Solusi Masalah Aktivitas Nelayan Disini"</h3>
+						<h1><?= $judul?></h1>
+						<h3 class="title text-center"><?= $isi?></h3>
 					</div>
 				</div>
 			</div>
 		</div>
 	</div>
-    <!-- end of textarea -->
-    
-    	<!-- Content -->
-	<div class="main main-raised">
-		<div class="container menu">
+	<!-- end of textarea -->

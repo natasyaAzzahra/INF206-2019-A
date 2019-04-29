@@ -1,4 +1,6 @@
-
+    <!-- Content -->
+	<div class="main main-raised">
+		<div class="container menu">
 			<h2 class="fitur pt-5 text-center"><span>List Fitur Nelayan Belajar</span></h2>
 			<div class="row align-items-center pb-2 pt-2">
 				<div class="col-lg-5 offset-1">
@@ -147,3 +149,4 @@
 					</div>
 				</div>
 			</div>
+	<!-- end of Content -->

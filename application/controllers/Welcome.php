@@ -20,8 +20,29 @@ class Welcome extends CI_Controller {
 	 */
 	public function index()
 	{
-		$this->load->view('templates/header');
+		$data['data']='Home';
+		$data['judul']='Nelayan Belajar';
+		$data['isi']='"Temukan Solusi Masalah Aktivitas Nelayan Disini"';
+		$this->load->view('templates/header',$data);
 		$this->load->view('home/index');
+		$this->load->view('templates/footer');
+	}
+	public function login()
+	{
+		$data['data']='Login';
+		$data['judul']='LOGIN ';
+		$data['isi']='"Satu Akun Untuk Berbagi Pengalaman Sesama Nelayan"';
+		$this->load->view('templates/header',$data);
+		$this->load->view('akun/login');
+		$this->load->view('templates/footer');
+	}
+	public function register()
+	{
+		$data['data']='Register';
+		$data['judul']='REGISTRASI ';
+		$data['isi']='"Miliki Sebuah Akun & Dapatkan Pengalaman Berharga"';
+		$this->load->view('templates/header',$data);
+		$this->load->view('akun/register');
 		$this->load->view('templates/footer');
 	}
 }
