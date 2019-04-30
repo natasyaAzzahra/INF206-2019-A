@@ -29,7 +29,7 @@
                                 </div> -->
 							<div class="create-ac">
 								<p>Belum Memiliki Akun ? <a
-										href="<?= base_url();?>index.php/welcome/register">Registrasi</a></p>
+										href="<?= base_url();?>register">Registrasi</a></p>
 							</div>
 						</div>
 					</div>

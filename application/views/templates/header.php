@@ -4,6 +4,7 @@
 <head>
 	<title><?=$data?></title>
 	<!--     Fonts and icons     -->
+	<!-- <link rel="icon" href=""> -->
 	<link rel="stylesheet" type="text/css"
 		href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons" />
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css">
@@ -20,7 +21,7 @@
 		color-on-scroll="100">
 		<div class=" container">
 			<div class="navbar-translate">
-				<a class="navbar-brand" href="http://localhost/INF206-2019-A/">Nelayan Belajar</a>
+				<a class="navbar-brand" href="<?= base_url();?>Home">Nelayan Belajar</a>
 				<button class="navbar-toggler" type="button" data-toggle="collapse" aria-expanded="false"
 					aria-label="Toggle navigation">
 					<span class="sr-only">Toggle navigation</span>
@@ -53,7 +54,7 @@
 				</form>
 
 				<div class="btn-group nav-item navbar-nav">
-					<a href="<?= base_url();?>index.php/welcome/login">
+					<a href="<?= base_url();?>Login">
 						<button class="btn bg-transparent btn-round" style="border:thick; color: grey;">Masuk</button>
 					</a>
 				</div>
