@@ -1,4 +1,20 @@
-    <!-- Content -->
+	<!-- textarea -->
+	<div class="page-header header-filter" data-parallax="true"
+		style="background-image: url('https://i.imgur.com/b8LbQU3.jpg')">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-8 ml-auto mr-auto">
+					<div class="brand text-center">
+						<h1><?= $judul?></h1>
+						<h3 class="title text-center"><?= $isi?></h3>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- end of textarea -->
+
+	<!-- Content -->
 	<div class="main main-raised">
 		<div class="container menu">
 			<h2 class="fitur pt-5 text-center"><span>List Fitur Nelayan Belajar</span></h2>
@@ -28,8 +44,7 @@
 									<img class="d-block w-100" src="https://i.imgur.com/Y5dldhL.jpg" alt="First slide">
 								</div>
 								<div class="carousel-item">
-									<img class="d-block w-100" src="https://i.imgur.com/JB4qFid.jpg"
-										alt="Second slide">
+									<img class="d-block w-100" src="https://i.imgur.com/JB4qFid.jpg" alt="Second slide">
 								</div>
 								<div class="carousel-item">
 									<img class="d-block w-100" src="https://i.imgur.com/NVGiKvL.jpg" alt="Third slide">
@@ -64,8 +79,7 @@
 									<img class="d-block w-100" src="https://i.imgur.com/42P6eOM.jpg" alt="First slide">
 								</div>
 								<div class="carousel-item">
-									<img class="d-block w-100" src="https://i.imgur.com/qFD5fQx.jpg"
-										alt="Second slide">
+									<img class="d-block w-100" src="https://i.imgur.com/qFD5fQx.jpg" alt="Second slide">
 								</div>
 								<div class="carousel-item">
 									<img class="d-block w-100" src="https://i.imgur.com/1nzoNSy.jpg" alt="Third slide">
@@ -112,7 +126,6 @@
 						proses diskusi antara
 						anggota forum nelayan. Sehingga dengan adanya forum akan membuat metode diskusi menjadi lebih
 						baik.
-
 					</p>
 					<a href="#" class="btn btn-dark mt-4">Read More</a>
 				</div>
@@ -149,4 +162,6 @@
 					</div>
 				</div>
 			</div>
+		</div>
+    </div>
 	<!-- end of Content -->

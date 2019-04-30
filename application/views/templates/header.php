@@ -62,19 +62,3 @@
 		</div>
 	</nav>
 	<!-- end of navbar -->
-
-	<!-- textarea -->
-	<div class="page-header header-filter" data-parallax="true"
-		style="background-image: url('https://i.imgur.com/b8LbQU3.jpg')">
-		<div class="container">
-			<div class="row">
-				<div class="col-md-8 ml-auto mr-auto">
-					<div class="brand text-center">
-						<h1><?= $judul?></h1>
-						<h3 class="title text-center"><?= $isi?></h3>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-	<!-- end of textarea -->
