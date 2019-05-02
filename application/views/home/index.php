@@ -1,12 +1,11 @@
 	<!-- textarea -->
-	<div class="page-header header-filter" data-parallax="true"
-		style="background-image: url('https://i.imgur.com/b8LbQU3.jpg')">
+	<div class="page-header header-filter" data-parallax="true" style="background-image: url('https://i.imgur.com/b8LbQU3.jpg')">
 		<div class="container">
 			<div class="row">
 				<div class="col-md-8 ml-auto mr-auto">
 					<div class="brand text-center">
-						<h1><?= $judul?></h1>
-						<h3 class="title text-center"><?= $isi?></h3>
+						<h1><?= $judul ?></h1>
+						<h3 class="title text-center"><?= $isi ?></h3>
 					</div>
 				</div>
 			</div>
@@ -50,13 +49,11 @@
 									<img class="d-block w-100" src="https://i.imgur.com/NVGiKvL.jpg" alt="Third slide">
 								</div>
 							</div>
-							<a class="carousel-control-prev" href="#carouselExampleIndicators" role="button"
-								data-slide="prev">
+							<a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
 								<span class="carousel-control-prev-icon" aria-hidden="true"></span>
 								<span class="sr-only">Previous</span>
 							</a>
-							<a class="carousel-control-next" href="#carouselExampleIndicators" role="button"
-								data-slide="next">
+							<a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
 								<span class="carousel-control-next-icon" aria-hidden="true"></span>
 								<span class="sr-only">Next</span>
 							</a>
@@ -85,13 +82,11 @@
 									<img class="d-block w-100" src="https://i.imgur.com/1nzoNSy.jpg" alt="Third slide">
 								</div>
 							</div>
-							<a class="carousel-control-prev" href="#carouselExampleIndicators" role="button"
-								data-slide="prev">
+							<a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
 								<span class="carousel-control-prev-icon" aria-hidden="true"></span>
 								<span class="sr-only">Previous</span>
 							</a>
-							<a class="carousel-control-next" href="#carouselExampleIndicators" role="button"
-								data-slide="next">
+							<a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
 								<span class="carousel-control-next-icon" aria-hidden="true"></span>
 								<span class="sr-only">Next</span>
 							</a>
@@ -148,13 +143,11 @@
 									<img class="d-block w-100" src="https://i.imgur.com/YQwU51u.jpg" alt="Third slide">
 								</div>
 							</div>
-							<a class="carousel-control-prev" href="#carouselExampleIndicators" role="button"
-								data-slide="prev">
+							<a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
 								<span class="carousel-control-prev-icon" aria-hidden="true"></span>
 								<span class="sr-only">Previous</span>
 							</a>
-							<a class="carousel-control-next" href="#carouselExampleIndicators" role="button"
-								data-slide="next">
+							<a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
 								<span class="carousel-control-next-icon" aria-hidden="true"></span>
 								<span class="sr-only">Next</span>
 							</a>
@@ -163,5 +156,5 @@
 				</div>
 			</div>
 		</div>
-    </div>
+	</div>
 	<!-- end of Content -->
