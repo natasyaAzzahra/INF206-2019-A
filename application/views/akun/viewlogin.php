@@ -5,19 +5,19 @@
 			<div class="row">
 				<div class="col-lg-4 col-md-6 ml-auto mr-auto mt-5 pt-5">
 					<div class="card card-login">
-						<form class="form" method="" action="">
-							<div class="card-header card-header-dark text-center">
-								<h4 class="card-title">Login</h4>
+						<form class="form" method="POST" action="<?= base_url() ?>login">
+							<div class="card-header card-header-warning text-center">
+								<h4 class="card-title">Masuk</h4>
 							</div>
-							<p class="description text-center pt-4">Login to your account</p>
+							<p class="description text-center pt-4">Masuk ke akun saya</p>
 							<div class="card-body pt-2">
 								<div class="input-group">
 									<div class="input-group-prepend">
 										<span class="input-group-text">
-											<i class="material-icons">face</i>
+											<i class="material-icons">perm_identity</i>
 										</span>
 									</div>
-									<input type="text" class="form-control" placeholder="Username">
+									<input name="Username" id="Username" type="text" class="form-control" placeholder="Nama Pengguna" required>
 								</div>
 								<!-- <div class="input-group">
 									<div class="input-group-prepend">
@@ -33,11 +33,11 @@
 											<i class="material-icons">lock_outline</i>
 										</span>
 									</div>
-									<input type="password" class="form-control" placeholder="Password">
+									<input name="password" type="password" id="password" class="form-control" placeholder="Kata Sandi" required>
 								</div>
 							</div>
 							<div class="footer text-center pt-3">
-								<a href="#" class="btn btn-dark btn-link btn-wd btn-lg">login</a>
+								<button type="submit" name="login" class="btn btn-dark btn-link btn-wd btn-lg">Masuk</button>
 							</div>
 							<div class="create-ac text-center">
 								<p>Belum Memiliki Akun ? <a href="<?= base_url();?>register">Registrasi</a></p>
