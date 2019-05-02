@@ -32,7 +32,12 @@ class Login extends CI_Controller
             // jika usernya nelayan/content creator
             if ($user['role_id'] == 2) {
                 if (password_verify($password, $user['password'])) {
-                    redirect('home');
+                    $data = [
+                        'username' => $user['username'],
+                        'role_id' => $user['role_id']
+                    ];
+                    $this->session->set_userdata($data);
+                    redirect('home/homeuser');
                 } else {
                     $this->session->set_flashdata('pesan', '<div class="alert alert-danger" role="alert" style="text-align: center">
                     Password yang dimasukkan salah!
@@ -59,5 +64,15 @@ class Login extends CI_Controller
             </div>');
             redirect('login');
         }
+    }
+    public function logout()
+    {
+        $this->session->unset_userdata('username');
+        $this->session->unset_userdata('role_id');
+
+        $this->session->set_flashdata('pesan', '<div class="alert alert-warning" role="alert" style="text-align: center">
+        Anda telah melakukan logout!
+        </div>');
+        redirect('login');
     }
 }

@@ -17,7 +17,7 @@
 											<i class="material-icons">perm_identity</i>
 										</span>
 									</div>
-									<input name="username" id="username" type="text" class="form-control" placeholder="Nama Pengguna" required>
+									<input name="username" id="username" type="text" class="form-control" placeholder="Nama Pengguna" required value="<?= set_value('username') ?>">
 								</div>
 								<div class="input-group">
 									<div class="input-group-prepend">

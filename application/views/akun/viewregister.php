@@ -16,7 +16,7 @@
 											<i class="material-icons">face</i>
 										</span>
 									</div>
-									<input name="namalengkap" type="text" class="form-control" placeholder="Nama Lengkap" id="namalengkap" required>
+									<input name="namalengkap" type="text" class="form-control" placeholder="Nama Lengkap" id="namalengkap" required value="<?= set_value('namalengkap') ?>">
 								</div>
 								<div class="input-group">
 									<div class="input-group-prepend">
@@ -24,7 +24,7 @@
 											<i class="material-icons">perm_identity</i>
 										</span>
 									</div>
-									<input name="username" type="text" class="form-control" placeholder="Nama Pengguna" id="username" required>
+									<input name="username" type="text" class="form-control" placeholder="Nama Pengguna" id="username" required value="<?= set_value('username') ?>">
 								</div>
 								<div class="input-group">
 									<div class="input-group-prepend">
@@ -32,9 +32,9 @@
 											<i class="material-icons">mail</i>
 										</span>
 									</div>
-									<input name="email" type="email" class="form-control" placeholder="Email" id="email" required>
+									<input name="email" type="email" class="form-control" placeholder="Email" id="email" required value="<?= set_value('email') ?>">
 								</div>
-								<?= form_error('email', '<small class="text-danger pl-5 ml-2">', '</small>'); ?>
+								<!-- <?= form_error('email', '<small class="text-danger pl-5 ml-2">', '</small>'); ?> -->
 								<div class="input-group">
 									<div class="input-group-prepend">
 										<span class="input-group-text">
