@@ -4,12 +4,19 @@
 			<div class="row">
 				<div class="col-lg-4 col-md-6 ml-auto mr-auto mt-5 pt-5">
 					<div class="card card-login">
+<<<<<<< HEAD
 						<form class="form" method="POST" action="<?= base_url() ?>Login">
+=======
+						<form class="form" method="POST" action="<?= base_url() ?>login">
+>>>>>>> 6ebfb919656230060a2d76d521fb9c417b2705b4
 							<div class="card-header card-header-warning text-center">
 								<h4 class="card-title">Masuk</h4>
 							</div>
 							<p class="description text-center pt-4">Masuk ke akun saya</p>
+<<<<<<< HEAD
 							<?= $this->session->flashdata('pesan'); ?>
+=======
+>>>>>>> 6ebfb919656230060a2d76d521fb9c417b2705b4
 							<div class="card-body pt-2">
 								<div class="input-group">
 									<div class="input-group-prepend">
@@ -17,7 +24,11 @@
 											<i class="material-icons">perm_identity</i>
 										</span>
 									</div>
+<<<<<<< HEAD
 									<input name="username" id="username" type="text" class="form-control" placeholder="Nama Pengguna" required>
+=======
+									<input name="Username" id="Username" type="text" class="form-control" placeholder="Nama Pengguna" required>
+>>>>>>> 6ebfb919656230060a2d76d521fb9c417b2705b4
 								</div>
 								<!-- <?= form_error('username', '<small class="text-danger pl-5 ml-2">', '</small>'); ?> -->
 								<!-- <div class="input-group">
