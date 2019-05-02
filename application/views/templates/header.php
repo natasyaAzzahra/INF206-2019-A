@@ -2,28 +2,24 @@
 <html lang="en">
 
 <head>
-	<title><?=$data?></title>
+	<title><?= $data ?></title>
 	<!--     Fonts and icons     -->
 	<!-- <link rel="icon" href=""> -->
-	<link rel="stylesheet" type="text/css"
-		href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons" />
+	<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons" />
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css">
-	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
-		integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
 	<!-- Material Kit CSS -->
-	<link href="<?= base_url();?>assets/css/material-kit.css?v=2.0.5" rel="stylesheet" />
-	<link rel="stylesheet" href="<?= base_url();?>assets/css/style.css">
+	<link href="<?= base_url(); ?>assets/css/material-kit.css?v=2.0.5" rel="stylesheet" />
+	<link rel="stylesheet" href="<?= base_url(); ?>assets/css/style.css">
 </head>
 
 <body>
 	<!-- navbar -->
-	<nav class="navbar navbar-transparent bg-dark navbar-color-on-scroll fixed-top navbar-expand-lg"
-		color-on-scroll="100">
+	<nav class="navbar navbar-transparent bg-dark navbar-color-on-scroll fixed-top navbar-expand-lg" color-on-scroll="100">
 		<div class=" container">
 			<div class="navbar-translate">
-				<a class="navbar-brand" href="<?= base_url();?>Home">Nelayan Belajar</a>
-				<button class="navbar-toggler" type="button" data-toggle="collapse" aria-expanded="false"
-					aria-label="Toggle navigation">
+				<a class="navbar-brand" href="<?= base_url(); ?>Home">Nelayan Belajar</a>
+				<button class="navbar-toggler" type="button" data-toggle="collapse" aria-expanded="false" aria-label="Toggle navigation">
 					<span class="sr-only">Toggle navigation</span>
 					<span class="navbar-toggler-icon"></span>
 					<span class="navbar-toggler-icon"></span>
@@ -54,7 +50,7 @@
 				</form>
 
 				<div class="btn-group nav-item navbar-nav">
-					<a href="<?= base_url();?>Login">
+					<a href="<?= base_url(); ?>Login">
 						<button class="btn bg-transparent btn-round" style="border:thick; color: grey;">Masuk</button>
 					</a>
 				</div>
