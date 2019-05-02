@@ -10,14 +10,6 @@
 							</div>
 							<p class="description text-center pt-2">Buat Akun</p>
 							<div class="card-body">
-								<!-- <div class="row input-group pl-5">
-									<div class="col-lg-6">
-										<input name="namadepan" type="text" class="form-control" placeholder="Nama Depan" id="namadepan" required>
-									</div>
-									<div class="col-lg-6">
-										<input name="namabelakang" type="text" class="form-control" placeholder="Nama Belakang" id="namabelakang" required>
-									</div>
-								</div> -->
 								<div class="input-group">
 									<div class="input-group-prepend">
 										<span class="input-group-text">

@@ -19,15 +19,6 @@
 									</div>
 									<input name="username" id="username" type="text" class="form-control" placeholder="Nama Pengguna" required>
 								</div>
-								<!-- <?= form_error('username', '<small class="text-danger pl-5 ml-2">', '</small>'); ?> -->
-								<!-- <div class="input-group">
-									<div class="input-group-prepend">
-										<span class="input-group-text">
-											<i class="material-icons">mail</i>
-										</span>
-									</div>
-									<input type="email" class="form-control" placeholder="Email">
-								</div> -->
 								<div class="input-group">
 									<div class="input-group-prepend">
 										<span class="input-group-text">
@@ -36,7 +27,6 @@
 									</div>
 									<input name="password" type="password" id="password" class="form-control" placeholder="Kata Sandi" required>
 								</div>
-								<!-- <?= form_error('password', '<small class="text-danger pl-5 ml-2">', '</small>'); ?> -->
 							</div>
 							<div class="footer text-center pt-3">
 								<button type="submit" name="login" class="btn btn-dark btn-link btn-wd btn-lg">Masuk</button>
