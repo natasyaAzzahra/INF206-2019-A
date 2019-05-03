@@ -47,7 +47,7 @@
                 </form>
 
                 <div class="btn-group nav-item navbar-nav">
-                    <button type="button" class="btn bg-transparent btn-just-icon btn-round" style="border:thick; color: grey;" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <button type="button" class="btn bg-transparent btn-just-icon btn-round" style="border:thick; color: grey; border-radius:50%;" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         <i class="material-icons">account_circle</i>
                     </button>
                     <div class="dropdown-menu">
