@@ -44,27 +44,20 @@
                     <div class="form-group no-border pr-4">
                         <input type="text" class="form-control place" placeholder="Search" style="color: grey;">
                     </div>
-                    <!-- <button type="submit" class="btn bg-transparent btn-just-icon btn-round" style="color: grey;">
-                        <i class="material-icons">search</i>
-                    </button> -->
                 </form>
 
                 <div class="btn-group nav-item navbar-nav">
-                    <a href="<?= base_url(); ?>Login/logout">
-                        <button class="btn bg-transparent btn-round" style="border:thick; color: grey;">Logout</button>
-                    </a>
-                    <!-- <div class="btn-group nav-item navbar-nav">
-                    <button type="button" class="btn bg-transparent btn-round dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <button type="button" class="btn bg-transparent btn-just-icon btn-round" style="border:thick; color: grey;" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         <i class="material-icons">account_circle</i>
                     </button>
                     <div class="dropdown-menu">
-                        <a class="dropdown-item" href="#">Action</a>
-                        <a class="dropdown-item" href="#">Another action</a>
-                        <a class="dropdown-item" href="#">Something else here</a>
+                        <a class="dropdown-item" href="#">Edit Profil</a>
+                        <a class="dropdown-item" href="#">Konten Saya</a>
+                        <a class="dropdown-item" href="<?= base_url(); ?>Login/logout">Logout</a>
                     </div>
-                </div> -->
                 </div>
             </div>
+        </div>
         </div>
     </nav>
     <!-- end of navbar -->
