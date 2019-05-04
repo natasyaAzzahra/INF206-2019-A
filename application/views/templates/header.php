@@ -50,9 +50,20 @@
 				</form>
 
 				<div class="btn-group nav-item navbar-nav">
-					<a href="<?= base_url(); ?>Login">
-						<button class="btn bg-transparent btn-round" style="border:thick; color: grey;">Masuk</button>
-					</a>
+					<?php if (!isset($_SESSION['username'])) : ?>
+						<a href="<?= base_url(); ?>Login">
+							<button class="btn bg-transparent btn-round" style="border:thick; color: grey;">Masuk</button>
+						</a>
+					<?php else : ?>
+						<button type="button" class="btn bg-transparent btn-just-icon btn-round" style="border:thick; color: grey; border-radius:50%;" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+							<i class="material-icons">account_circle</i>
+						</button>
+						<div class="dropdown-menu">
+							<a class="dropdown-item" href="#">Edit Profil</a>
+							<a class="dropdown-item" href="#">Konten Saya</a>
+							<a class="dropdown-item" href="<?= base_url(); ?>Login/logout">Logout</a>
+						</div>
+					<?php endif; ?>
 				</div>
 			</div>
 		</div>

@@ -27,12 +27,4 @@ class Home extends CI_Controller
 		$this->load->view('home/index');
 		$this->load->view('templates/footer');
 	}
-	public function homeuser()
-	{
-		$data['data'] = 'Home';
-		$data['judul'] = 'Nelayan Belajar';
-		$data['isi'] = '"Temukan Solusi Masalah Aktivitas Nelayan Disini"';
-		$this->load->view('home/homeuser', $data);
-		$this->load->view('templates/footer');
-	}
 }
