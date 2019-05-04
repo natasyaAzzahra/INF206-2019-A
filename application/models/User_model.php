@@ -4,11 +4,12 @@ class User_model extends CI_Model
     public function tambahDataUser()
     {
         $data = array(
-            "namalengkap" => $this->input->post('namalengkap', true),
-            "username" => $this->input->post('username', true),
-            "email" => $this->input->post('email', true),
+            "namalengkap" => htmlspecialchars($this->input->post('namalengkap', true)),
+            "username" => htmlspecialchars($this->input->post('username', true)),
+            "email" => htmlspecialchars($this->input->post('email', true)),
             "password" => password_hash($this->input->post('password'), PASSWORD_DEFAULT),
-            "role_id" => 2
+            "role_id" => 2,
+            "image" => 'default.jpg'
         );
         $this->db->insert('user', $data);
     }
@@ -26,7 +27,6 @@ class User_model extends CI_Model
                 if (password_verify($password, $user['password'])) {
                     $data = [
                         'username' => $user['username'],
-                        'namalengkap' => $user['namalengkap'],
                         'role_id' => $user['role_id']
                     ];
                     $this->session->set_userdata($data);
@@ -39,16 +39,21 @@ class User_model extends CI_Model
                 }
             }
             // jika usernya admin
-            // elseif ($user['role_id'] == 1) {
-            //     if (password_verify($password, $user['password'])) {
-            //         redirect('home');
-            //     } else {
-            //         $this->session->set_flashdata('pesan', '<div class="alert alert-danger" role="alert" style="text-align: center">
-            //         Password yang dimasukkan salah!
-            //         </div>');
-            //         redirect('login');
-            //     }
-            // }
+            elseif ($user['role_id'] == 1) {
+                if (password_verify($password, $user['password'])) {
+                    $data = [
+                        'username' => $user['username'],
+                        'role_id' => $user['role_id']
+                    ];
+                    $this->session->set_userdata($data);
+                    redirect('admin');
+                } else {
+                    $this->session->set_flashdata('pesan', '<div class="alert alert-danger" role="alert" style="text-align: center">
+                    Password yang dimasukkan salah!
+                    </div>');
+                    redirect('login');
+                }
+            }
         }
         // jika usernya gak ada
         else {

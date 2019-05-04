@@ -20,11 +20,12 @@ class Home extends CI_Controller
 	 */
 	public function index()
 	{
+		$data['user'] = $this->db->get_where('user', ['username' => $this->session->userdata('username')])->row_array();
 		$data['data'] = 'Home';
 		$data['judul'] = 'Nelayan Belajar';
 		$data['isi'] = '"Temukan Solusi Masalah Aktivitas Nelayan Disini"';
-		$this->load->view('templates/header', $data);
+		$this->load->view('templates/user/header', $data);
 		$this->load->view('home/index');
-		$this->load->view('templates/footer');
+		$this->load->view('templates/user/footer');
 	}
 }
