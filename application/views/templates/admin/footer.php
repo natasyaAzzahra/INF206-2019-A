@@ -15,7 +15,7 @@
                         </li>
                         <li>
                             <a href="#">
-                                Blog
+                                contact us
                             </a>
                         </li>
                     </ul>
@@ -66,8 +66,6 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/core-js/2.4.1/core.js"></script>
         <!-- Library for adding dinamically elements -->
         <script src="<?= base_url(); ?>/assets/js/plugins/arrive.min.js"></script>
-        <!--  Google Maps Plugin    -->
-        <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY_HERE"></script>
         <!-- Chartist JS -->
         <script src="<?= base_url(); ?>/assets/js/plugins/chartist.min.js"></script>
         <!--  Notifications Plugin    -->
@@ -76,6 +74,13 @@
         <script src="<?= base_url(); ?>/assets/js/material-dashboard.js?v=2.1.1" type="text/javascript"></script>
         <!-- Material Dashboard DEMO methods, don't include it in your project! -->
         <script src="<?= base_url(); ?>/assets/demo/demo.js"></script>
+        <script>
+            $(document).ready(function() {
+                // Javascript method's body can be found in assets/js/demos.js
+                md.initDashboardPageCharts();
+
+            });
+        </script>
         </body>
 
         </html>
