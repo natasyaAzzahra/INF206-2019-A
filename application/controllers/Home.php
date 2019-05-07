@@ -33,4 +33,13 @@ class Home extends CI_Controller
 	{
 		$this->load->view('fitur/viewkonten');
 	}
+
+	public function kontak()
+	{
+		$data['user'] = $this->db->get_where('user', ['username' => $this->session->userdata('username')])->row_array();
+		$data['data'] = 'Home';
+		$data['judul'] = 'Nelayan Belajar';
+		$data['isi'] = '"Temukan Solusi Masalah Aktivitas Nelayan Disini"';
+		$this->load->view('fitur/viewkontak', $data);
+	}
 }
