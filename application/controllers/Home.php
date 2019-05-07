@@ -28,4 +28,9 @@ class Home extends CI_Controller
 		$this->load->view('home/index');
 		$this->load->view('templates/user/footer');
 	}
+
+	public function konten()
+	{
+		$this->load->view('fitur/viewkonten');
+	}
 }
