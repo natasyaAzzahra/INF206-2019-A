@@ -97,7 +97,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Contact V17</title>
+    <title>Hubungi Kami</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 <!--===============================================================================================-->
@@ -3639,46 +3639,40 @@ textarea.input100 {
     <div class="container-contact100">
         <div class="wrap-contact100">
             <form class="contact100-form validate-form">
-                <span class="contact100-form-title">
-                    Send Us A Message
-                </span>
+                
 
-                <label class="label-input100" for="first-name">Tell us your name *</label>
-                <div class="wrap-input100 rs1-wrap-input100 validate-input" data-validate="Type first name">
-                    <input id="first-name" class="input100" type="text" name="first-name" placeholder="First name">
+                 <label class="label-input100" for="nama">Masukkan nama anda *</label>
+                <div class="wrap-input100 validate-input" data-validate = "Contoh: abc@gmail.com">
+                    <input id="nama" class="input100" type="text" name="nama" placeholder="Masukkan Nama  ">
                     <span class="focus-input100"></span>
                 </div>
-                <div class="wrap-input100 rs2-wrap-input100 validate-input" data-validate="Type last name">
-                    <input class="input100" type="text" name="last-name" placeholder="Last name">
-                    <span class="focus-input100"></span>
-                </div>
-
-                <label class="label-input100" for="email">Enter your email *</label>
-                <div class="wrap-input100 validate-input" data-validate = "Valid email is required: ex@abc.xyz">
-                    <input id="email" class="input100" type="text" name="email" placeholder="Eg. example@email.com">
+               
+                <label class="label-input100" for="email">Masukkan Email Anda *</label>
+                <div class="wrap-input100 validate-input" data-validate = "Contoh: abc@gmail.com">
+                    <input id="email" class="input100" type="text" name="email" placeholder="Contoh : abc@gmail.com">
                     <span class="focus-input100"></span>
                 </div>
 
-                <label class="label-input100" for="phone">Enter phone number</label>
+                <label class="label-input100" for="phone">Masukkan Nomor Telepon Anda</label>
                 <div class="wrap-input100">
-                    <input id="phone" class="input100" type="text" name="phone" placeholder="Eg. +1 800 000000">
+                    <input id="phone" class="input100" type="text" name="phone" placeholder="Contoh : +62 800 000000">
                     <span class="focus-input100"></span>
                 </div>
 
-                <label class="label-input100" for="message">Message *</label>
+                <label class="label-input100" for="pesan">Tuliskan Pertanyaan Anda *</label>
                 <div class="wrap-input100 validate-input" data-validate = "Message is required">
-                    <textarea id="message" class="input100" name="message" placeholder="Write us a message"></textarea>
+                    <textarea id="pesan" class="input100" name="pesan" placeholder="Tulis Pesan"></textarea>
                     <span class="focus-input100"></span>
                 </div>
 
                 <div class="container-contact100-form-btn">
                     <button class="contact100-form-btn">
-                        Send Message
+                        KIRIM
                     </button>
                 </div>
             </form>
 
-            <div class="contact100-more flex-col-c-m" style="background-image: url('images/bg-01.jpg');">
+            <div class="contact100-more flex-col-c-m" style="background-color:  rgb(205, 133, 63);">
                 <div class="flex-w size1 p-b-47">
                     <div class="txt1 p-r-25">
                         <span class="lnr lnr-map-marker"></span>
@@ -3686,11 +3680,11 @@ textarea.input100 {
 
                     <div class="flex-col size2">
                         <span class="txt1 p-b-20">
-                            Address
+                            Alamat
                         </span>
 
                         <span class="txt2">
-                            Mada Center 8th floor, 379 Hudson St, New York, NY 10018 US
+                            Banda Aceh. Jl.Raya Lambaro Km 4,5 Desa Meunasah Manyang, Ingin Jaya, Aceh Besar, Aceh 23371
                         </span>
                     </div>
                 </div>
@@ -3702,11 +3696,11 @@ textarea.input100 {
 
                     <div class="flex-col size2">
                         <span class="txt1 p-b-20">
-                            Lets Talk
+                            Hubungi
                         </span>
 
                         <span class="txt3">
-                            +1 800 1236879
+                            +62 800 1236879
                         </span>
                     </div>
                 </div>
@@ -3718,11 +3712,11 @@ textarea.input100 {
 
                     <div class="flex-col size2">
                         <span class="txt1 p-b-20">
-                            General Support
+                            Kontak Lengkap
                         </span>
 
                         <span class="txt3">
-                            contact@example.com
+                            nelayanbelajar@gmail.com
                         </span>
                     </div>
                 </div>
