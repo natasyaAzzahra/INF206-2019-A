@@ -31,7 +31,12 @@ class Home extends CI_Controller
 
 	public function konten()
 	{
-		$this->load->view('fitur/viewkonten');
+		$data['user'] = $this->db->get_where('user', ['username' => $this->session->userdata('username')])->row_array();
+		if (isset($_SESSION['username'])) {
+			$this->load->view('fitur/viewkonten');
+		} else {
+			redirect('login');
+		}
 	}
 
 	public function kontak()
@@ -40,13 +45,15 @@ class Home extends CI_Controller
 		$data['data'] = 'Home';
 		$data['judul'] = 'Nelayan Belajar';
 		$data['isi'] = '"Temukan Solusi Masalah Aktivitas Nelayan Disini"';
+		$this->load->view('templates/user/header', $data);
 		$this->load->view('fitur/viewkontak', $data);
+		$this->load->view('templates/user/footer');
 	}
 
 	public function wawasan()
 	{
 		$data['user'] = $this->db->get_where('user', ['username' => $this->session->userdata('username')])->row_array();
-		$data['data'] = 'wawasan';
+		$data['data'] = 'Wawasan';
 		$data['judul'] = 'Nelayan Belajar';
 		$data['isi'] = '"Temukan Solusi Masalah Aktivitas Nelayan Disini"';
 		$this->load->view('templates/user/header', $data);
