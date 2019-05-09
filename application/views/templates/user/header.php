@@ -30,7 +30,7 @@
 			<div class="collapse navbar-collapse">
 				<ul class="navbar-nav">
 					<li class="nav-item">
-						<a href="#" class="nav-link">Wawasan</a>
+						<a href="<?= base_url('Home/wawasan') ?>" class="nav-link">Wawasan</a>
 					</li>
 					<li class="nav-item">
 						<a href="#" class="nav-link">Peraturan UU</a>
@@ -62,7 +62,7 @@
 							<label class="dropdown-item"><?= $user['namalengkap'] ?></label>
 							<div class="dropdown-divider"></div>
 							<a class="dropdown-item" href="#">Edit Profil</a>
-							<a class="dropdown-item" href="#">Konten Saya</a>
+							<a class="dropdown-item" href="<?= base_url('home/konten') ?>">Konten Saya</a>
 							<a class="dropdown-item" href="<?= base_url(); ?>Login/logout">Keluar</a>
 						</div>
 					<?php endif; ?>
