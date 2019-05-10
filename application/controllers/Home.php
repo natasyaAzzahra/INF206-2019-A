@@ -32,11 +32,10 @@ class Home extends CI_Controller
 	public function konten()
 	{
 		$data['user'] = $this->db->get_where('user', ['username' => $this->session->userdata('username')])->row_array();
-		if (isset($_SESSION['username'])) {
-			$this->load->view('fitur/viewkonten');
-		} else {
-			redirect('login');
-		}
+		$data['data'] = 'Profil Saya';
+		$this->load->view('templates/user/header', $data);
+		$this->load->view('fitur/viewkonten');
+		$this->load->view('templates/user/footer');
 	}
 
 	public function kontak()
