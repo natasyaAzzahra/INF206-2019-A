@@ -8,7 +8,7 @@
 			<div class="col-md-4 pt-5 pl-5">
 				<ul class="nav">
 					<li class="nav-item ">
-						<a href="#" class="nav-link">
+						<a href="<?= base_url('home/kontak') ?>" class="nav-link">
 							Contact Us
 						</a>
 					</li>
