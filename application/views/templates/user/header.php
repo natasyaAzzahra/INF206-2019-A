@@ -62,7 +62,7 @@
 							<label class="dropdown-item"><?= $user['namalengkap'] ?></label>
 							<div class="dropdown-divider"></div>
 							<a class="dropdown-item" href="#">Edit Profil</a>
-							<a class="dropdown-item" href="<?= base_url('home/konten') ?>">Konten Saya</a>
+							<a class="dropdown-item" href="<?= base_url(); ?>home/konten">Konten Saya</a>
 							<a class="dropdown-item" href="<?= base_url(); ?>Login/logout">Keluar</a>
 						</div>
 					<?php endif; ?>
