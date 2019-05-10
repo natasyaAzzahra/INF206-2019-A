@@ -60,4 +60,15 @@ class Home extends CI_Controller
 		$this->load->view('fitur/viewwawasan');
 		$this->load->view('templates/user/footer');
 	}
+
+	public function tentangkami()
+	{
+		$data['user'] = $this->db->get_where('user', ['username' => $this->session->userdata('username')])->row_array();
+		$data['data'] = 'Tentang Kami';
+		$data['judul'] = 'Nelayan Belajar';
+		$data['isi'] = '"Temukan Solusi Masalah Aktivitas Nelayan Disini"';
+		$this->load->view('templates/user/header', $data);
+		$this->load->view('fitur/viewtentangkami', $data);
+		$this->load->view('templates/user/footer');
+	}
 }

@@ -18,26 +18,7 @@
         <div class="container menu">
             <h2 class="fitur pt-5 text-center"><span>Tentang Kami</span></h2>
             <div class="row align-items-center pb-2 pt-2">
-
-                  <div class="main main-raised">
-        <div class="container menu">
-            <h2 class="fitur pt-5 text-center"><span>Tentang Kami</span></h2>
-            <div class="row align-items-center pb-2 pt-2">
-
-                  <div class="main main-raised">
-        <div class="container menu">
-            <h2 class="fitur pt-5 text-center"><span>Tentang Kami</span></h2>
-            <div class="row align-items-center pb-2 pt-2">
-
-                  <div class="main main-raised">
-        <div class="container menu">
-            <h2 class="fitur pt-5 text-center"><span>Tentang Kami</span></h2>
-            <div class="row align-items-center pb-2 pt-2">
-
-                  <div class="main main-raised">
-        <div class="container menu">
-            <h2 class="fitur pt-5 text-center"><span>Tentang Kami</span></h2>
-            <div class="row align-items-center pb-2 pt-2">
+                
                 <!-- isi disinu -->
                 <div class="card" style="width: 18rem;">
                 <img src="..." class="card-img-top" alt="...">
