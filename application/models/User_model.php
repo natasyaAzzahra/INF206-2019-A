@@ -9,7 +9,8 @@ class User_model extends CI_Model
             "email" => htmlspecialchars($this->input->post('email', true)),
             "password" => password_hash($this->input->post('password'), PASSWORD_DEFAULT),
             "role_id" => 2,
-            "image" => 'default.jpg'
+            "image" => 'default.jpg',
+            "date_created" => time()
         );
         $this->db->insert('user', $data);
     }
@@ -49,5 +50,37 @@ class User_model extends CI_Model
             </div>');
             redirect('login');
         }
+    }
+    public function editprofil()
+    {
+        $namalengkap = $this->input->post('namalengkap');
+        $email = $this->input->post('email');
+
+        $upload_image = $_FILES['image'];
+        if ($upload_image) {
+
+            $config['upload_path']          = './assets/img/';
+            $config['allowed_types']        = 'gif|jpg|png';
+            $config['max_size']             = 2048;
+
+            $this->load->library('upload', $config);
+
+            if (!$this->upload->do_upload('image')) {
+                $this->session->set_flashdata('pesan', '<div class="alert alert-danger" role="alert" style="text-align: center">
+                Harap memasukkan foto!
+                </div>');
+                redirect('profil');
+            } else {
+                $image =  $this->upload->data('file_name');
+            }
+        }
+        if ($namalengkap != '') {
+            $this->db->set('namalengkap', $namalengkap);
+        }
+        $this->db->set('image', $image);
+        $this->db->where('email', $email);
+        $this->db->update('user');
+
+        redirect('profil');
     }
 }
