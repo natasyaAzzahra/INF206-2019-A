@@ -61,11 +61,11 @@
 						<div class="dropdown-menu">
 							<label class="dropdown-item"><?= $user['namalengkap'] ?></label>
 							<div class="dropdown-divider"></div>
-							<a class="dropdown-item" href="#">
+							<a class="dropdown-item" href="<?= base_url('profil') ?>">
 								<i class="fas fa-user-edit fa-sm fa-fw mr-2 text-gray-400"></i>
 								Edit Profil
 							</a>
-							<a class="dropdown-item" href="<?= base_url('home/konten') ?>">
+							<a class="dropdown-item" href="<?= base_url('profil/konten') ?>">
 								<i class="fas fa-newspaper fa-sm fa-fw mr-2 text-gray-400"></i>
 								Konten Saya
 							</a>
