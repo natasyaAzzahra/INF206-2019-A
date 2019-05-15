@@ -15,16 +15,6 @@ class Home extends CI_Controller
 		$this->load->view('templates/user/footer');
 	}
 
-	public function konten()
-	{
-		$data['user'] = $this->db->get_where('user', ['username' => $this->session->userdata('username')])->row_array();
-		if ($this->session->userdata('username')) {
-			$this->load->view('fitur/viewkonten');
-		} else {
-			redirect('login');
-		}
-	}
-
 	public function kontak()
 	{
 		$data['user'] = $this->db->get_where('user', ['username' => $this->session->userdata('username')])->row_array();

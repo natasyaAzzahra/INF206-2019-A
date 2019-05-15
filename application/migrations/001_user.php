@@ -43,6 +43,10 @@ class Migration_user extends CI_Migration
                 'type' => 'VARCHAR',
                 'constraint' => '128',
             ),
+            'date_created' => array(
+                'type' => 'INT',
+                'constraint' => '11',
+            ),
         ));
         $this->dbforge->add_key('id', TRUE);
         $this->dbforge->create_table('user');
