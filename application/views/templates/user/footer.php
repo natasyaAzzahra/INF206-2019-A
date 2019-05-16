@@ -8,24 +8,19 @@
 			<div class="col-md-4 pt-5 pl-5">
 				<ul class="nav">
 					<li class="nav-item ">
-						<a href="<?= base_url('home/kontak') ?>" class="nav-link">
-							Contact Us
+						<a href="<?= base_url('info/kontak') ?>" class="nav-link">
+							Kontak Kami
 						</a>
 					</li>
 					<li class="nav-item">
-						<a href="#" class="nav-link">
-							About Us
-						</a>
-					</li>
-					<li class="nav-item">
-						<a href="#" class="nav-link">
-							License
+						<a href="<?= base_url('info') ?>" class="nav-link">
+							Tentang Kami
 						</a>
 					</li>
 				</ul>
 			</div>
 			<div class="col-md-4">
-				<h3 class="title">Follow us:</h3>
+				<h3 class="title">Ikuti Kami:</h3>
 				<div class="btn-wrapper profile">
 					<a target="_blank" href="#" class="btn btn-icon btn-neutral btn-round btn-simple" data-toggle="tooltip" data-original-title="Follow us">
 						<i class="fab fa-twitter"></i>
