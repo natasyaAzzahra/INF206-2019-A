@@ -7,7 +7,7 @@ class Admin extends CI_Controller
         Parent::__construct();
         $this->load->model('User_model');
         $this->load->library('form_validation');
-        
+
         if ($this->session->userdata('role_id') == 2) {
             redirect('home');
         } else if (!$this->session->userdata('username')) {
@@ -19,6 +19,7 @@ class Admin extends CI_Controller
     {
         $data['data'] = 'Home';
         $data['user'] = $this->db->get_where('user', ['username' => $this->session->userdata('username')])->row_array();
+        $data['title'] = 'Dashboard';
         $this->load->view('templates/admin/header', $data);
         $this->load->view('home/indexadmin', $data);
         $this->load->view('templates/admin/footer');
