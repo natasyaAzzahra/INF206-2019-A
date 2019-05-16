@@ -18,8 +18,6 @@ class Profil extends CI_Controller
             $data['user'] = $this->db->get_where('user', ['username' => $this->session->userdata('username')])->row_array();
             if ($this->session->userdata('username')) {
                 $data['data'] = 'Edit Profil';
-                $data['judul'] = 'Nelayan Belajar';
-                $data['isi'] = '"Temukan Solusi Masalah Aktivitas Nelayan Disini"';
                 $this->load->view('templates/user/header', $data);
                 $this->load->view('fitur/vieweditprofil', $data);
                 $this->load->view('templates/user/footer');

@@ -1,6 +1,7 @@
 <body class="profile-page">
-    <div class="page-header header-filter" data-parallax="true" style="background-image:url('https://i.imgur.com/b8LbQU3.jpg');"></div>
+    <div class="page-header header-filter" data-parallax="true" style="background-image:url('https://i.imgur.com/8SHVwNO.jpg');"></div>
     <div class="main main-raised">
+        <!-- konten -->
         <div class="profile-content">
             <div class="container">
                 <div class="row">
@@ -34,12 +35,6 @@
                                         Tambah Konten
                                     </a>
                                 </li>
-                                <!-- <li class="nav-item">
-                                    <a class="nav-link" href="#video" role="tab" data-toggle="tab">
-                                        <i class="material-icons">camera</i>
-                                        Video Tutorial
-                                    </a>
-                                </li> -->
                             </ul>
                         </div>
                     </div>
@@ -215,12 +210,8 @@
                     </div>
                 </section>
                 <br>
-                <!--================Category  Area End =================-->
-
-
-                <script src="https://unpkg.com/popper.js@1.12.6/dist/umd/popper.js" integrity="sha384-fA23ZRQ3G/J53mElWqVJEGJzU0sTs+SvzG8fXVWP+kJQ1lwFAOkcUOysnlKJC33U" crossorigin="anonymous"></script>
-                <script src="https://unpkg.com/bootstrap-material-design@4.1.1/dist/js/bootstrap-material-design.js" integrity="sha384-CauSuKpEqAFajSpkdjv3z9t8E7RlpJ1UP0lKM/+NdtSarroVKu069AlsRPKkFBz9" crossorigin="anonymous"></script>
             </div>
         </div>
+        <!-- end of konten -->
     </div>
 </body>
