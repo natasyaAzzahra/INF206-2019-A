@@ -83,4 +83,25 @@ class User_model extends CI_Model
 
         redirect('profil');
     }
+    //fungsi untuk menampilkan semua data user
+    public function getAllUser()
+    {
+        return $this->db->get('user')->result_array();
+    }
+
+    //fungsi untuk menghapus user
+    public function hapusDataUser($id)
+    {
+        $this->db->where('id', $id);
+        $this->db->delete('user');
+    }
+
+    public function tambahuud()
+    {
+        $data = array(
+            "judul" => htmlspecialchars($this->input->post('judul', true)),
+            "isi" => htmlspecialchars($this->input->post('isi', true))
+        );
+        $this->db->insert('undang', $data);
+    }
 }
