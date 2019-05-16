@@ -43,4 +43,30 @@ class Admin extends CI_Controller
         </div>');
         redirect('admin/daftaruser');
     }
+
+    public function uud()
+    {
+        if ($this->session->userdata('username')) {
+            $data['user'] = $this->db->get_where('user', ['username' => $this->session->userdata('username')])->row_array();
+            $data['title'] = 'Peraturan UU';
+            $data['data'] = 'Peraturan UU';
+
+            $this->form_validation->set_rules('judul', 'Judul', 'trim|required');
+            $this->form_validation->set_rules('isi', 'Isi', 'trim|required');
+
+            if ($this->form_validation->run() == false) {
+                $this->load->view('templates/admin/header', $data);
+                $this->load->view('admin/viewuud', $data);
+                $this->load->view('templates/admin/footer');
+            } else {
+                $this->User_model->tambahuud();
+                $this->session->set_flashdata('pesan', '<div class="alert alert-success" role="alert" style="text-align: center">
+                Peraturan Undang-undang berhasil ditambahkan!
+                </div>');
+                redirect('admin/uud');
+            }
+        } else {
+            redirect('login');
+        }
+    }
 }
