@@ -95,4 +95,26 @@ class User_model extends CI_Model
         $this->db->where('id', $id);
         $this->db->delete('user');
     }
+
+    public function tambahuud()
+    {
+        $data = array(
+            "judul" => htmlspecialchars($this->input->post('judul', true)),
+            "isi" => htmlspecialchars($this->input->post('isi', true))
+        );
+        $this->db->insert('undang', $data);
+    }
+
+     // fungsi untuk menampilkan semua uud
+    public function getAllUud()
+    {
+        return $this->db->get('undang')->result_array();
+    }
+
+    //fungsi untuk menghapus uud
+    public function hapusDataUud($id)
+    {
+        $this->db->where('id', $id);
+        $this->db->delete('undang');
+    }
 }
