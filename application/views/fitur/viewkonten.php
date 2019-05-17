@@ -6,6 +6,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-6 ml-auto mr-auto">
+                        <!-- foto profile dari user -->
                         <div class="profile">
                             <div class="avatar">
                                 <img src="<?= base_url('assets/img/' . $user['image']); ?>" alt="Circle Image" class="img-raised rounded-circle img-fluid">
@@ -16,6 +17,7 @@
                         </div>
                     </div>
                 </div>
+                <!-- bio dari user -->
                 <div class="description text-center">
                     <p>Kehidupan nelayan juga merupakan kebaikan karena dengan aktivitas ini banyak keluarga bisa makan ikan dan aktivitas yang menantang melawan laut dan menjadi alasan saya untuk berbagi pengetahuan agar semu nelayan ama dan lancar dalam meulaut. </p>
                 </div>
@@ -23,12 +25,14 @@
                     <div class="col-md-4 ml-auto mr-auto">
                         <div class="profile-tabs">
                             <ul class="nav nav-pills nav-pills-icons justify-content-center" role="tablist">
+                                <!-- button untuk memilih halaman konten saya -->
                                 <li class="nav-item">
                                     <a class="nav-link active" href="#konten" role="tab" data-toggle="tab">
                                         <!-- <i class="material-icons">favorite</i> -->
                                         Konten Saya
                                     </a>
                                 </li>
+                                <!-- button untuk memilih halaman tambah konten -->
                                 <li class="nav-item">
                                     <a class="nav-link" href="#artikel" role="tab" data-toggle="tab">
                                         <!-- <i class="material-icons">add</i> -->
@@ -43,6 +47,7 @@
                 <section class="category-page area-padding">
                     <div class="container">
                         <div class="row">
+                            <!-- artikel 1 -->
                             <div class="col-md-6 col-lg-4">
                                 <div class="single-category">
                                     <div class="thumb">
@@ -63,6 +68,7 @@
                                     </div>
                                 </div>
                             </div>
+                            <!-- artikel 2 -->
                             <div class="col-md-6 col-lg-4">
                                 <div class="single-category">
                                     <div class="thumb">
@@ -83,6 +89,7 @@
                                     </div>
                                 </div>
                             </div>
+                            <!-- artikel 3 -->
                             <div class="col-md-6 col-lg-4">
                                 <div class="single-category">
                                     <div class="thumb">
@@ -103,6 +110,7 @@
                                     </div>
                                 </div>
                             </div>
+                            <!-- artikel atau koten ke 4 -->
                             <div class="col-md-6 col-lg-4">
                                 <div class="single-category">
                                     <div class="thumb">
@@ -123,6 +131,7 @@
                                     </div>
                                 </div>
                             </div>
+                            <!--konten ke 5 -->
                             <div class="col-md-6 col-lg-4">
                                 <div class="single-category">
                                     <div class="thumb">
@@ -143,6 +152,7 @@
                                     </div>
                                 </div>
                             </div>
+                            <!-- konten ke 6 -->
                             <div class="col-md-6 col-lg-4">
                                 <div class="single-category">
                                     <div class="thumb">
@@ -163,6 +173,7 @@
                                     </div>
                                 </div>
                             </div>
+                            <!-- konten ke 7 -->
                             <div class="col-md-6 col-lg-4">
                                 <div class="single-category">
                                     <div class="thumb">
@@ -183,6 +194,7 @@
                                     </div>
                                 </div>
                             </div>
+                            <!-- konten ke 8 -->
                             <div class="col-md-6 col-lg-4">
                                 <div class="single-category">
                                     <div class="thumb">

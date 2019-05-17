@@ -2,6 +2,7 @@
 
 class Admin extends CI_Controller
 {
+    //function untuk mengatur login admin
     public function __construct()
     {
         Parent::__construct();
@@ -15,6 +16,7 @@ class Admin extends CI_Controller
         }
     }
 
+    //function untuk halaman home admin
     public function index()
     {
         $data['data'] = 'Home';
@@ -24,6 +26,8 @@ class Admin extends CI_Controller
         $this->load->view('home/indexadmin', $data);
         $this->load->view('templates/admin/footer');
     }
+
+    //function untuk menampilkan halaman daftar user pada admin
     public function daftaruser()
     {
         if ($this->session->userdata('username')) {
@@ -39,6 +43,7 @@ class Admin extends CI_Controller
         }
     }
 
+    //function untuk menghapus data user
     public function hapus($id)
     {
         $this->User_model->hapusDataUser($id);
@@ -48,6 +53,7 @@ class Admin extends CI_Controller
         redirect('admin/daftaruser');
     }
 
+    //function untuk halaman pelaturan uu di admin
     public function uud()
     {
         if ($this->session->userdata('username')) {
@@ -75,6 +81,7 @@ class Admin extends CI_Controller
         }
     }
 
+    //function untuk menghapus uud di admin
     public function hapusuud($id)
     {
         $this->User_model->hapusDataUud($id);
