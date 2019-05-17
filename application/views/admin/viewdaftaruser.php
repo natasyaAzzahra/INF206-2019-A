@@ -4,6 +4,7 @@
             <div class="col-md-12">
                 <?= $this->session->flashdata('pesan'); ?>
                 <div class="card">
+                    <!-- untuk tabel yang berisi data data user -->
                     <div class="card-header card-header-warning">
                         <h4 class="card-title text-center">Daftar User</h4>
                     </div>
@@ -12,6 +13,7 @@
                             <table class="table">
                                 <thead class="text-warning">
                                     <tr>
+                                        <!-- kolom dari tabel -->
                                         <th scope="col">No.</th>
                                         <th scope="col">Username</th>
                                         <th scope="col">Nama Lengkap</th>
@@ -29,6 +31,7 @@
                                                     <?php echo $i;
                                                     $i++; ?>
                                                 </th>
+                                                <!-- terintegrasi dari database nya -->
                                                 <td><?= $usr['username']; ?></td>
                                                 <td><?= $usr['namalengkap']; ?></td>
                                                 <td><?= $usr['email']; ?></td>

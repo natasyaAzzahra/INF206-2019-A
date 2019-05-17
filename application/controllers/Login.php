@@ -8,6 +8,8 @@ class Login extends CI_Controller
         $this->load->model('User_model');
         $this->load->library('form_validation');
     }
+
+    //function untuk mengatur halaman awal setelah login dari setiap user
     public function index()
     {
         if ($this->session->userdata('role_id') == 2) {
@@ -27,6 +29,8 @@ class Login extends CI_Controller
             $this->User_model->_login();
         }
     }
+
+    //function untuk keluar dari akun/ logout
     public function logout()
     {
         $this->session->unset_userdata('username');

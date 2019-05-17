@@ -16,8 +16,10 @@
 	<!-- Content -->
 	<div class="main main-raised">
 		<div class="container menu">
+			<!-- penjelasan gambaran umum fitur -->
 			<h2 class="fitur pt-5 text-center"><span>List Fitur Nelayan Belajar</span></h2>
 			<div class="row align-items-center pb-2 pt-2">
+				<!-- fitur wawasan -->
 				<div class="col-lg-5 offset-1">
 					<h3 class="text-dark font-weight-light">Wawasan</h3>
 					<p class="text-dark mt-4 text-justify">Wawasan sangat penting dalam setiap aspek kehidupan begitu
@@ -28,6 +30,7 @@
 						bimbingan
 						dalam bidang kelautan dan perikanan.
 					</p>
+					<!-- menghubungkan ke halaman wawasan -->
 					<a href="<?= base_url('home/wawasan'); ?>" class="btn btn-dark mt-4">Read More</a>
 				</div>
 				<div class="col-lg-5">
@@ -38,6 +41,7 @@
 								<li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
 								<li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
 							</ol>
+							<!-- gambar slide pada wawasan-->
 							<div class="carousel-inner">
 								<div class="carousel-item active">
 									<img class="d-block w-100" src="https://i.imgur.com/Y5dldhL.jpg" alt="First slide">
@@ -61,7 +65,7 @@
 					</div>
 				</div>
 			</div>
-
+			<!-- gambaran umum fitur UU -->
 			<div class="row align-items-center pb-4 pt-2">
 				<div class="col-lg-5 offset-1">
 					<div class="section text-center">
@@ -71,6 +75,7 @@
 								<li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
 								<li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
 							</ol>
+							<!-- gambar slide UUD -->
 							<div class="carousel-inner">
 								<div class="carousel-item active">
 									<img class="d-block w-100" src="https://i.imgur.com/42P6eOM.jpg" alt="First slide">
@@ -93,6 +98,7 @@
 						</div>
 					</div>
 				</div>
+				<!-- Penjelasan UUD -->
 				<div class="col-lg-5 ">
 					<h3 class="text-dark font-weight-light">Peraturan UU</h3>
 					<p class="text-dark mt-4 text-justify"> Peraturan UU sangat penting kaitannya bagi kehidupan
@@ -106,9 +112,10 @@
 					<a href="#" class="btn btn-dark mt-4">Read More</a>
 				</div>
 			</div>
-
+			<!-- gambaran umum fitur forum -->
 			<div class="row align-items-center pb-5 pt-1">
 				<div class="col-lg-5 offset-1">
+					<!-- penjelasan forum -->
 					<h3 class="text-dark font-weight-light">Forum</h3>
 					<p class="text-dark mt-4 text-justify">Forum adalah sebuah sarana komunikasi bagi para penggunanya.
 						Sebuah forum diskusi bisa menjadi salah satu cara yang dapat memperkaya pengalaman para nelayan.
@@ -132,6 +139,7 @@
 								<li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
 								<li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
 							</ol>
+							<!-- gambar slide forum -->
 							<div class="carousel-inner">
 								<div class="carousel-item active">
 									<img class="d-block w-100" src="https://i.imgur.com/EnegqAy.jpg" alt="First slide">
