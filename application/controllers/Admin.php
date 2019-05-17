@@ -2,9 +2,13 @@
 
 class Admin extends CI_Controller
 {
+    //function untuk mengatur login admin
     public function __construct()
     {
         Parent::__construct();
+        $this->load->model('User_model');
+        $this->load->library('form_validation');
+
         if ($this->session->userdata('role_id') == 2) {
             redirect('home');
         } else if (!$this->session->userdata('username')) {
@@ -12,14 +16,18 @@ class Admin extends CI_Controller
         }
     }
 
+    //function untuk halaman home admin
     public function index()
     {
         $data['data'] = 'Home';
         $data['user'] = $this->db->get_where('user', ['username' => $this->session->userdata('username')])->row_array();
+        $data['title'] = 'Dashboard';
         $this->load->view('templates/admin/header', $data);
         $this->load->view('home/indexadmin', $data);
         $this->load->view('templates/admin/footer');
     }
+
+    //function untuk menampilkan halaman daftar user pada admin
     public function daftaruser()
     {
         if ($this->session->userdata('username')) {
@@ -35,6 +43,7 @@ class Admin extends CI_Controller
         }
     }
 
+    //function untuk menghapus data user
     public function hapus($id)
     {
         $this->User_model->hapusDataUser($id);
@@ -44,12 +53,14 @@ class Admin extends CI_Controller
         redirect('admin/daftaruser');
     }
 
+    //function untuk halaman pelaturan uu di admin
     public function uud()
     {
         if ($this->session->userdata('username')) {
             $data['user'] = $this->db->get_where('user', ['username' => $this->session->userdata('username')])->row_array();
             $data['title'] = 'Peraturan UU';
             $data['data'] = 'Peraturan UU';
+            $data['alluud'] = $this->User_model->getAllUud();
 
             $this->form_validation->set_rules('judul', 'Judul', 'trim|required');
             $this->form_validation->set_rules('isi', 'Isi', 'trim|required');
@@ -68,5 +79,15 @@ class Admin extends CI_Controller
         } else {
             redirect('login');
         }
+    }
+
+    //function untuk menghapus uud di admin
+    public function hapusuud($id)
+    {
+        $this->User_model->hapusDataUud($id);
+        $this->session->set_flashdata('pesan', '<div class="alert alert-success" role="alert" style="text-align: center">
+        Data Undang-undang berhasil dihapus!
+        </div>');
+        redirect('admin/uud');
     }
 }

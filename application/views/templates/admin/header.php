@@ -34,34 +34,35 @@
             </div>
             <div class="sidebar-wrapper">
                 <ul class="nav">
-                    <li class="nav-item active  ">
-                        <a class="nav-link" href="#">
+                    <!-- <li class="nav-item active"> -->
+                    <li class="nav-item <?php if ($title == 'Dashboard') : ?>active<?php endif; ?>">
+                        <a class="nav-link" href="<?= base_url('admin') ?>">
                             <i class="material-icons">dashboard</i>
                             <p>Dashboard</p>
                         </a>
                     </li>
-                    <li class="nav-item ">
-                        <a class="nav-link" href="#">
+                    <li class="nav-item <?php if ($title == 'Daftar User') : ?>active<?php endif; ?>">
+                        <a class="nav-link" href="<?= base_url('admin/daftaruser'); ?>">
                             <i class="material-icons">person</i>
                             <p>Daftar User</p>
                         </a>
                     </li>
-                    <li class="nav-item ">
+                    <!-- <li class="nav-item ">
                         <a class="nav-link" href="#">
                             <i class="material-icons">content_paste</i>
                             <p>Table List</p>
                         </a>
-                    </li>
-                    <li class="nav-item ">
+                    </li> -->
+                    <li class="nav-item">
                         <a class="nav-link" href="#">
-                            <i class="material-icons">library_books</i>
+                            <i class="material-icons">textsms</i>
                             <p>Daftar Konten</p>
                         </a>
                     </li>
-                    <li class="nav-item ">
-                        <a class="nav-link" href="#">
+                    <li class="nav-item  <?php if ($title == 'Peraturan UU') : ?>active<?php endif; ?>">
+                        <a class="nav-link" href="<?= base_url('admin/uud') ?>">
                             <i class="material-icons">library_books</i>
-                            <p>Daftar Peraturan UU</p>
+                            <p>Peraturan UU</p>
                         </a>
                     </li>
                 </ul>
@@ -72,7 +73,7 @@
             <nav class="navbar navbar-expand-lg navbar-transparent navbar-absolute fixed-top ">
                 <div class="container-fluid">
                     <div class="navbar-wrapper">
-                        <a class="navbar-brand" href="#pablo">Dashboard</a>
+                        <!-- <a class="navbar-brand" href="#pablo">Dashboard</a> -->
                     </div>
                     <button class="navbar-toggler" type="button" data-toggle="collapse" aria-controls="navigation-index" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="sr-only">Toggle navigation</span>

@@ -1,6 +1,7 @@
 <?php
 class User_model extends CI_Model
 {
+    //function untuk menambah data user
     public function tambahDataUser()
     {
         $data = array(
@@ -15,6 +16,7 @@ class User_model extends CI_Model
         $this->db->insert('user', $data);
     }
 
+    //function untuk login
     public function _login()
     {
         $username = $this->input->post('username');
@@ -51,10 +53,13 @@ class User_model extends CI_Model
             redirect('login');
         }
     }
+
+    //Function untuk edit profil user
     public function editprofil()
     {
         $namalengkap = $this->input->post('namalengkap');
         $email = $this->input->post('email');
+
 
         $upload_image = $_FILES['image'];
         if ($upload_image) {
@@ -83,6 +88,7 @@ class User_model extends CI_Model
 
         redirect('profil');
     }
+
     //fungsi untuk menampilkan semua data user
     public function getAllUser()
     {
@@ -103,5 +109,18 @@ class User_model extends CI_Model
             "isi" => htmlspecialchars($this->input->post('isi', true))
         );
         $this->db->insert('undang', $data);
+    }
+
+    // fungsi untuk menampilkan semua uud
+    public function getAllUud()
+    {
+        return $this->db->get('undang')->result_array();
+    }
+
+    //fungsi untuk menghapus uud
+    public function hapusDataUud($id)
+    {
+        $this->db->where('id', $id);
+        $this->db->delete('undang');
     }
 }
