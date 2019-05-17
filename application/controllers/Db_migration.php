@@ -2,7 +2,7 @@
 
 class Db_migration extends CI_Controller
 {
-
+    //function untuk memindahkan tabel yang telah ada ke basisdata masing-masing secara langsung
     public function index()
     {
         $this->load->library('migration');

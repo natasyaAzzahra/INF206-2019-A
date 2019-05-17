@@ -8,6 +8,7 @@
 							<div class="card-header card-header-warning text-center">
 								<h4 class="card-title">Daftar</h4>
 							</div>
+							<!-- tampilan untuk membuat akun -->
 							<p class="description text-center pt-2">Buat Akun</p>
 							<div class="card-body">
 								<div class="input-group">
@@ -16,9 +17,11 @@
 											<i class="material-icons">face</i>
 										</span>
 									</div>
+									<!-- nama lengkap user-->
 									<input name="namalengkap" type="text" class="form-control" placeholder="Nama Lengkap" id="namalengkap" required value="<?= set_value('namalengkap') ?>">
 								</div>
 								<div class="input-group">
+									<!-- username user -->
 									<div class="input-group-prepend">
 										<span class="input-group-text">
 											<i class="material-icons">perm_identity</i>
@@ -32,6 +35,7 @@
 											<i class="material-icons">mail</i>
 										</span>
 									</div>
+									<!-- email user -->
 									<input name="email" type="email" class="form-control" placeholder="Email" id="email" required value="<?= set_value('email') ?>">
 								</div>
 								<!-- <?= form_error('email', '<small class="text-danger pl-5 ml-2">', '</small>'); ?> -->
@@ -41,6 +45,7 @@
 											<i class="material-icons">lock_outline</i>
 										</span>
 									</div>
+									<!-- password user -->
 									<input name="password" type="password" class="form-control" placeholder="Kata Sandi" id="password" required>
 								</div>
 								<?= form_error('password', '<small class="text-danger pl-5 ml-2">', '</small>'); ?>
@@ -48,6 +53,7 @@
 							<div class="footer text-center">
 								<button type="submit" name="register" class="btn btn-dark btn-link btn-wd btn-lg">Register</button>
 							</div>
+							<!-- menghubungkan ke halaman login -->
 							<div class="create-ac text-center pb-2">
 								<p>Sudah Memiliki Akun ? <a href="<?= base_url(); ?>Login">Masuk</a></p>
 							</div>
