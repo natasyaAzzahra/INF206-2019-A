@@ -39,9 +39,9 @@
                         <input type="text" class="form-control" id="namalengkap" name="namalengkap" placeholder="Nama Lengkap">
                     </div>
                     <!-- untuk bio user -->
-                    <div class="form-group pt-0">
+                    <!-- <div class="form-group pt-0">
                         <input type="text" class="form-control" id="bio" name="bio" placeholder="Bio">
-                    </div>
+                    </div> -->
                     <!-- untuk tombol submit pada edit profil -->
                     <div class="text-right form-group pt-0">
                         <button type="submit" class="btn btn-warning">Edit Profil</button>
