@@ -5,6 +5,7 @@
         <div class="container">
             <h2 class="fitur pt-5 text-center"><span>Tentang Kami</span></h2>
             <div class="row justify-content-center">
+                <!-- data diri pengembang aplikasi /putra -->
                 <div class="col-md-3 text-center">
                     <div class="card" style="width: 18rem;">
                         <img src="<?= base_url('assets/img/put.jpg'); ?>" class="card-img-top" alt="">
@@ -16,6 +17,7 @@
                     </div>
                 </div>
             </div>
+            <!-- data diri pengembang aplikasi / Natasya -->
             <div class="row justify-content-center">
                 <div class="col-md-3 mr-5 text-center">
                     <div class="card" style="width: 18rem;">
@@ -27,6 +29,7 @@
                         </div>
                     </div>
                 </div>
+                <!-- data diri pengembang aplikasi /Rezky -->
                 <div class="col-md-3 ml-5 text-center">
                     <div class="card" style="width: 18rem;">
                         <img src="<?= base_url('assets/img/res.jpg'); ?>" class="card-img-top" alt="">
@@ -38,6 +41,7 @@
                     </div>
                 </div>
             </div>
+            <!-- data diri pengembang aplikasi /Mauliza -->
             <div class="row justify-content-center">
                 <div class="col-md-3 mr-5 text-center">
                     <div class="card" style="width: 18rem;">
@@ -49,6 +53,7 @@
                         </div>
                     </div>
                 </div>
+                <!-- data diri pengembang aplikasi /miftah -->
                 <div class="col-md-3 ml-5 text-center">
                     <div class="card" style="width: 18rem;">
                         <img src="<?= base_url('assets/img/mif.jpg'); ?>" class="card-img-top" alt="">

@@ -16,7 +16,7 @@
 <body>
 	<!-- navbar -->
 	<nav class="navbar navbar-transparent bg-dark navbar-color-on-scroll fixed-top navbar-expand-lg" color-on-scroll="100">
-		<div class=" container">
+		<div class="container">
 			<div class="navbar-translate">
 				<a class="navbar-brand" href="<?= base_url(); ?>Home">Nelayan Belajar</a>
 				<button class="navbar-toggler" type="button" data-toggle="collapse" aria-expanded="false" aria-label="Toggle navigation">
@@ -55,9 +55,7 @@
 							<button class="btn bg-transparent btn-round" style="border:thick; color: grey;">Masuk</button>
 						</a>
 					<?php else : ?>
-						<button type="button" class="btn bg-transparent btn-just-icon btn-round" style="border:thick; color: grey; border-radius:50%;" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-							<i class="material-icons">account_circle</i>
-						</button>
+						<img src="<?= base_url('assets/img/' . $user['image']); ?>" class="btn bg-transparent btn-just-icon rounded-circle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 						<div class="dropdown-menu">
 							<label class="dropdown-item"><?= $user['namalengkap'] ?></label>
 							<div class="dropdown-divider"></div>

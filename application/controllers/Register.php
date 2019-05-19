@@ -8,12 +8,16 @@ class Register extends CI_Controller
         $this->load->model('User_model');
         $this->load->library('form_validation');
     }
+
+    //function untuk menampilkan halaman registrasi
     public function index()
     {
         $data['data'] = 'Register';
         $this->load->view('templates/user/header', $data);
         $this->load->view('akun/viewregister');
     }
+
+    //function untuk mendaftar akun
     public function tambah()
     {
         $this->form_validation->set_rules('namelengkap', 'Namalengkap', 'trim');
@@ -21,11 +25,14 @@ class Register extends CI_Controller
         $this->form_validation->set_rules('email', 'Email', 'trim');
         $this->form_validation->set_rules('password', 'Password', 'trim|min_length[6]');
 
+        //kondisi ketika tidak berhasil mendaftar
         if ($this->form_validation->run() == false) {
             $data['data'] = 'Register';
             $this->load->view('templates/user/header', $data);
             $this->load->view('akun/viewregister');
-        } else {
+        }
+        //kondisi ketika berhasil mendaftar
+        else {
             $this->User_model->tambahDataUser();
             $this->session->set_flashdata('pesan', '<div class="alert alert-warning" role="alert" style="text-align: center">
             Selamat! Akun kamu sudah dibuat. Harap melakukan login
