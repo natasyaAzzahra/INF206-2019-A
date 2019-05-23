@@ -1,7 +1,7 @@
 <div class="content">
     <div class="container-fluid">
         <div class="row">
-            <div class="col-md-9">
+            <div class="col-md-12">
                 <?= $this->session->flashdata('pesan'); ?>
                 <div class="card">
                     <!-- tabel yang berisi uud-->
@@ -30,9 +30,7 @@
                                                 $i++; ?>
                                             </th>
                                             <td><?= $uud['judul']; ?></td>
-                                            <td>
-                                                <pre><?= $uud['isi']; ?></pre>
-                                            </td>
+                                            <td><?= $uud['isi']; ?></td>
                                             <td>
                                                 <!-- pilihan menghapus uud -->
                                                 <a href="<?= base_url() ?>admin/hapusuud/<?= $uud['id']; ?>" class="badge badge-danger" rel="tooltip" title="Hapus" onclick="return confirm('Yakin?');">
@@ -47,7 +45,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-md-9">
+            <div class="col-md-12">
                 <div class="card">
                     <!-- untuk menambah uud -->
                     <div class="card-header card-header-warning">

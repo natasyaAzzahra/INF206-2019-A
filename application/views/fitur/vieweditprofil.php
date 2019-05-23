@@ -10,7 +10,7 @@
             <div class="fileinput fileinput-new text-center" data-provides="fileinput">
                 <!-- untuk tampilan foto profil user -->
                 <div class="fileinput-new thumbnail">
-                    <img src="<?= base_url('assets/img/' . $user['image']) ?>" class="img-fluid" width="200px" height="200px" style="border:2px solid silver;padding:5px;">
+                    <img src="<?= base_url('assets/img/profil/' . $user['image']) ?>" class="img-fluid" width="200px" height="200px" style="border:2px solid silver;padding:5px;">
                 </div>
                 <div class="fileinput-preview fileinput-exists thumbnail"></div>
                 <!-- untuk mengganti foto profil user -->
