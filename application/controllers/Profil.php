@@ -81,4 +81,15 @@ class Profil extends CI_Controller
             redirect('profil/konten');
         }
     }
+
+    // fungsi untuk menampilkan detail konten berdasarkan id
+    public function kontendetail($id)
+    {
+        $data['user'] = $this->db->get_where('user', ['username' => $this->session->userdata('username')])->row_array();
+        $data['data'] = 'Detail Konten';
+        $data['konten'] = $this->User_model->getKontenById($id);
+        $this->load->view('templates/user/header', $data);
+        $this->load->view('fitur/viewdetail', $data);
+        $this->load->view('templates/user/footer');
+    }
 }

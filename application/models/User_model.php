@@ -59,8 +59,8 @@ class User_model extends CI_Model
     public function editprofil()
     {
         $namalengkap = $this->input->post('namalengkap');
+        $bio = $this->input->post('bio');
         $email = $this->input->post('email');
-
 
         $upload_image = $_FILES['image'];
         if ($upload_image) {
@@ -68,7 +68,6 @@ class User_model extends CI_Model
             $config['upload_path']          = './assets/img/profil/';
             $config['allowed_types']        = 'gif|jpg|png';
             $config['max_size']             = 2048;
-
             $this->load->library('upload', $config);
 
             if (!$this->upload->do_upload('image')) {
@@ -77,11 +76,14 @@ class User_model extends CI_Model
                 </div>');
                 redirect('profil');
             } else {
-                $image =  $this->upload->data('file_name');
+                $image = $this->upload->data('file_name');
             }
         }
         if ($namalengkap != '') {
             $this->db->set('namalengkap', $namalengkap);
+        }
+        if ($bio != '') {
+            $this->db->set('bio', $bio);
         }
         $this->db->set('image', $image);
         $this->db->where('email', $email);
@@ -171,5 +173,11 @@ class User_model extends CI_Model
     {
         $this->db->where('id', $id);
         $this->db->delete('konten');
+    }
+
+    // fungsi untuk melihat detail konten
+    public function getKontenById($id)
+    {
+        return $this->db->get_where('konten', ['id' => $id])->row_array();
     }
 }

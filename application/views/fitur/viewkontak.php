@@ -146,7 +146,7 @@
   <div class="main main-raised">
     <!-- Content -->
     <div class="container menu">
-      <h2 class="fitur pt-5 text-center"><span>Hubungi Kami</span></h2>
+      <h2 class="title pt-5 text-center"><span>Hubungi Kami</span></h2>
       <div class="row align-items-center pb-2 pt-2 text-center">
         <div class="container second-portion">
           <div class="row">

@@ -19,7 +19,7 @@
                 </div>
                 <!-- bio dari user -->
                 <div class="description text-justify mt-0">
-                    <p>Kehidupan nelayan juga merupakan kebaikan karena dengan aktivitas ini banyak keluarga bisa makan ikan dan aktivitas yang menantang melawan laut dan menjadi alasan saya untuk berbagi pengetahuan agar semu nelayan ama dan lancar dalam meulaut. </p>
+                    <p><?= $user['bio']; ?></p>
                 </div>
                 <div class="row">
                     <div class="col-md-4 ml-auto mr-auto">
@@ -60,10 +60,13 @@
                                             <br>
                                             <small style="color:red;"><?= $uk['genre'] ?> / <?= date('d F Y', $uk['date_created']); ?></small>
                                             <div class="pb-3">
-                                                <a href="#" class="badge badge-primary float-left mb-3 mt-2">
-                                                    Edit konten
+                                                <!-- <a href="<?= base_url('profil/editkonten/' . $uk['id']); ?>" class="badge badge-primary mt-2">
+                                                        Edit konten
+                                                    </a> -->
+                                                <a href="<?= base_url('profil/kontendetail/' . $uk['id']); ?>" class="badge badge-success mt-2">
+                                                    Detail
                                                 </a>
-                                                <a href="<?= base_url('profil/hapuskonten/' . $uk['id']); ?>" class="badge badge-danger float-right mt-2" onclick="return confirm('Yakin?');">
+                                                <a href="<?= base_url('profil/hapuskonten/' . $uk['id']); ?>" class="badge badge-danger mt-2" onclick="return confirm('Yakin?');">
                                                     Hapus konten
                                                 </a>
                                             </div>
@@ -83,7 +86,7 @@
                                     </div>
                                     <input type="text" class="form-control" name="judul" placeholder="Masukkan Judul Konten" value="<?= set_value('judul') ?>">
                                 </div>
-                                <?= form_error('judul', '<small class="text-danger">', '</small>'); ?>
+                                <?= form_error('judul', '<small class="text-danger pl-5">', '</small>'); ?>
                                 <div class="form-group pt-0 pb-0 mb-0 mt-0 input-group">
                                     <div class="input-group-prepend">
                                         <span class="input-group-text">
@@ -95,8 +98,8 @@
                                         <option value="Artikel">Artikel</option>
                                         <option value="Video">Video</option>
                                     </select>
-                                    <?= form_error('genre', '<small class="text-danger">', '</small>'); ?>
                                 </div>
+                                <?= form_error('genre', '<small class="text-danger pl-5">', '</small>'); ?>
                                 <div class="form-group pt-0 pb-0 mt-0 input-group" id="vids">
                                     <div class="input-group-prepend">
                                         <span class="input-group-text">
@@ -122,7 +125,6 @@
                                 <button type="submit" class="btn btn-primary mt-3">Submit</button>
                                 </form>
                             </div>
-                            <!-- <iframe width="560" height="315" src="https://www.youtube.com/embed/<?= substr("https://youtu.be/pRfmrE0ToTo", 16); ?>" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
                         </div>
                     </div>
                 </section>

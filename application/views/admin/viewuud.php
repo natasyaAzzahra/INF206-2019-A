@@ -33,8 +33,11 @@
                                             <td><?= $uud['isi']; ?></td>
                                             <td>
                                                 <!-- pilihan menghapus uud -->
+                                                <!-- <a href="<?= base_url() ?>admin/ubahuud/<?= $uud['id']; ?>" class="badge badge-primary" rel="tooltip" title="Ubah">
+                                                        <i class="fas fa-edit"></i>
+                                                    </a> -->
                                                 <a href="<?= base_url() ?>admin/hapusuud/<?= $uud['id']; ?>" class="badge badge-danger" rel="tooltip" title="Hapus" onclick="return confirm('Yakin?');">
-                                                    <i class="material-icons">close</i>
+                                                    <i class="fas fa-trash"></i>
                                                 </a>
                                             </td>
                                         </tr>
@@ -56,7 +59,7 @@
                             <!-- judul uud -->
                             <div class="form-group">
                                 <label for="uud">Judul Undang-undang</label>
-                                <input type="text" class="form-control" id="uud" name="judul" aria-describedby="emailHelp">
+                                <input type="text" class="form-control" id="uud" name="judul">
                                 <?= form_error('judul', '<small class="text-danger">', '</small>'); ?>
                             </div>
                             <!-- isi dari uud -->
