@@ -101,4 +101,35 @@ class Profil extends CI_Controller
         $this->load->view('fitur/viewdetail', $data);
         $this->load->view('templates/user/footer');
     }
+
+    //function untuk mengubah konten
+    public function editkonten($id)
+    {
+        $this->form_validation->set_rules('judul', 'Judul', 'trim|required');
+        $this->form_validation->set_rules('genre', 'Jenis Konten', 'trim|required');
+        $this->form_validation->set_rules('video', 'Video', 'trim');
+        $this->form_validation->set_rules('isi', 'Isi', 'trim|required');
+
+        // kondisi ketika form validasi masih kosong
+        if ($this->form_validation->run() == FALSE) {
+            $data['user'] = $this->db->get_where('user', ['username' => $this->session->userdata('username')])->row_array();
+            //kondisi ketika user telah melakukan login
+            if ($this->session->userdata('username')) {
+                $data['data'] = 'Ubah Konten';
+                $data['konten'] = $this->User_model->getKontenById($id);
+                $this->load->view('templates/user/header', $data);
+                $this->load->view('fitur/viewubahkonten', $data);
+                $this->load->view('templates/user/footer');
+            }
+            //kondisi ketika user tidak dalam keadaan login
+            else {
+                redirect('login');
+            }
+        }
+        // kondisi ketika form sudah terisi
+        else {
+            $this->User_model->editkonten();
+            redirect('profil/konten');
+        }
+    }
 }

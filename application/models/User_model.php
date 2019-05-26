@@ -181,9 +181,46 @@ class User_model extends CI_Model
         return $this->db->get_where('konten', ['id' => $id])->row_array();
     }
 
-     // fungsi untuk menampilkan semua konten yg diupload oleh konten creator di halaman wawasan
+    // fungsi untuk menampilkan semua konten yg diupload oleh konten creator di halaman wawasan
     public function getAllKonten()
     {
         return $this->db->get('konten')->result_array();
+    }
+
+    //fungsi untuk mengubah konten
+    public function editkonten()
+    {
+        $upload_image = $_FILES['image'];
+        if ($upload_image) {
+
+            $config['upload_path']          = './assets/img/konten/';
+            $config['allowed_types']        = 'gif|jpg|png';
+            $config['max_size']             = 2048;
+
+            $this->load->library('upload', $config);
+
+            if (!$this->upload->do_upload('image')) {
+                $this->session->set_flashdata('pesan', '<div class="alert alert-danger" role="alert" style="text-align: center">
+                Harap memasukkan foto!
+                </div>');
+                // $id = $this->uri->segmen(1);
+                redirect('profil/konten/');
+            } else {
+                $image =  $this->upload->data();
+                $data = [
+                    "judul" => htmlspecialchars($this->input->post('judul', true)),
+                    "genre" => htmlspecialchars($this->input->post('genre', true)),
+                    "isi" => htmlspecialchars($this->input->post('isi', true)),
+                    "video" => substr($this->input->post('video', true), 17),
+                    "date_created" => time(),
+                    "user_id" => $this->session->userdata('id'),
+                    "username" => $this->session->userdata('username'),
+                    "image" => $image['file_name']
+                ];
+                $this->db->where('id', $this->input->post('id'));
+                $this->db->update('konten', $data);
+            }
+        }
+        redirect('profil/konten');
     }
 }
