@@ -4,7 +4,7 @@
 		<!-- konten -->
 		<div class="container">
 			<div class="row justify-content-center pb-2 pt-2">
-				<h3>Daftar Konten</h3>
+				<h3 class="title">Daftar Konten</h3>
 			</div>
 			<div class="row">
 				<?php foreach ($allkonten as $ak) : ?>
