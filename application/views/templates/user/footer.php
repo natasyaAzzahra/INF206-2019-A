@@ -51,6 +51,37 @@
 <script async defer src="https://buttons.github.io/buttons.js"></script>
 <!-- Control Center for Material Kit: parallax effects, scripts for the example pages etc -->
 <script src="<?= base_url(); ?>assets/js/material-kit.js?v=2.0.5" type="text/javascript"></script>
+
+<!-- ajax -->
+<script>
+	$('#file').on('change', function() {
+		let filename = $(this).val().split('\\').pop();
+		$(this).next('.inputFileHidden').addClass("selected").html(filename)
+	})
+
+	$('document').ready(function() {
+		$('#panel2').hide()
+		$('#konten_saya').click(function() {
+			$('#panel1').show()
+			$('#panel2').hide()
+		})
+
+		$('#tambah').click(function() {
+			$('#panel1').hide()
+			$('#panel2').show()
+		})
+
+		$('#vids').hide()
+		$('#konten').on('change', function() {
+			if ($('#konten').val() == "Video") {
+				$('#vids').show()
+			} else
+				$('#vids').hide()
+		})
+	})
+</script>
+<!-- end of ajax -->
+
 </body>
 
 </html>

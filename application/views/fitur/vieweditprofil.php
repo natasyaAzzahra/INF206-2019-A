@@ -10,7 +10,7 @@
             <div class="fileinput fileinput-new text-center" data-provides="fileinput">
                 <!-- untuk tampilan foto profil user -->
                 <div class="fileinput-new thumbnail">
-                    <img src="<?= base_url('assets/img/' . $user['image']) ?>" class="img-fluid" width="200px" height="200px" style="border:2px solid silver;padding:5px;">
+                    <img src="<?= base_url('assets/img/profil/' . $user['image']) ?>" class="img-fluid" width="200px" height="200px" style="border:2px solid silver;padding:5px;">
                 </div>
                 <div class="fileinput-preview fileinput-exists thumbnail"></div>
                 <!-- untuk mengganti foto profil user -->
@@ -32,16 +32,18 @@
                     </div>
                     <!-- untuk username user -->
                     <div class="form-group pb-0 pt-0">
-                        <input type="text" class="form-control" id="username" aria-describedby="emailHelp" readonly value="<?= $user['username'] ?>">
+                        <input type="text" class="form-control" id="username" readonly value="<?= $user['username'] ?>">
                     </div>
                     <!-- untuk nama lengkap user -->
                     <div class="form-group pt-0">
-                        <input type="text" class="form-control" id="namalengkap" name="namalengkap" placeholder="Nama Lengkap">
+                        <input type="text" class="form-control" id="namalengkap" name="namalengkap" placeholder="Nama Lengkap" value="<?= $user['namalengkap']; ?>">
                     </div>
                     <!-- untuk bio user -->
-                    <div class="form-group pt-0">
-                        <input type="text" class="form-control" id="bio" name="bio" placeholder="Bio">
+                    <div class="form-group">
+                        <label for="bio">Bio</label>
+                        <textarea class="form-control" id="bio" name="bio" rows="6"><?= $user['bio']; ?></textarea>
                     </div>
+
                     <!-- untuk tombol submit pada edit profil -->
                     <div class="text-right form-group pt-0">
                         <button type="submit" class="btn btn-warning">Edit Profil</button>

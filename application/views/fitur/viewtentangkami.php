@@ -3,7 +3,7 @@
     <div class="main main-raised">
         <!-- konten -->
         <div class="container">
-            <h2 class="fitur pt-5 text-center"><span>Tentang Kami</span></h2>
+            <h2 class="title pt-5 text-center"><span>Tentang Kami</span></h2>
             <div class="row justify-content-center">
                 <!-- data diri pengembang aplikasi /putra -->
                 <div class="col-md-3 text-center">

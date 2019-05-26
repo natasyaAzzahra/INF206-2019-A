@@ -2,9 +2,8 @@
 
 defined('BASEPATH') or exit('No direct script access allowed');
 
-class Migration_user extends CI_Migration
+class Migration_konten extends CI_Migration
 {
-
     public function __construct()
     {
         $this->load->dbforge();
@@ -19,23 +18,24 @@ class Migration_user extends CI_Migration
                 'unsigned' => TRUE,
                 'auto_increment' => TRUE
             ),
-            'namalengkap' => array(
-                'type' => 'VARCHAR',
-                'constraint' => '255',
+            'user_id' => array(
+                'type' => 'INT',
+                'constraint' => '20',
+                'unsigned' => TRUE
             ),
             'username' => array(
                 'type' => 'VARCHAR',
                 'constraint' => '255',
             ),
-            'email' => array(
+            'judul' => array(
                 'type' => 'VARCHAR',
                 'constraint' => '255',
             ),
-            'password' => array(
+            'genre' => array(
                 'type' => 'VARCHAR',
                 'constraint' => '255',
             ),
-            'role_id' => array(
+            'date_created' => array(
                 'type' => 'INT',
                 'constraint' => '11',
             ),
@@ -43,21 +43,20 @@ class Migration_user extends CI_Migration
                 'type' => 'VARCHAR',
                 'constraint' => '128',
             ),
-            'date_created' => array(
-                'type' => 'INT',
-                'constraint' => '11',
+            'isi' => array(
+                'type' => 'VARCHAR',
+                'constraint' => '10000',
             ),
-            'bio' => array(
+            'video' => array(
                 'type' => 'VARCHAR',
                 'constraint' => '1000',
             ),
         ));
         $this->dbforge->add_key('id', TRUE);
-        $this->dbforge->create_table('user');
+        $this->dbforge->create_table('konten');
     }
-
     public function down()
     {
-        $this->dbforge->drop_table('user');
+        $this->dbforge->drop_table('konten');
     }
 }
