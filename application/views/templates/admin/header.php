@@ -47,14 +47,8 @@
                             <p>Daftar User</p>
                         </a>
                     </li>
-                    <!-- <li class="nav-item ">
-                        <a class="nav-link" href="#">
-                            <i class="material-icons">content_paste</i>
-                            <p>Table List</p>
-                        </a>
-                    </li> -->
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">
+                    <li class="nav-item <?php if ($title == 'Daftar Konten') : ?>active<?php endif; ?>">
+                        <a class="nav-link" href="<?= base_url('admin/daftarkonten') ?>">
                             <i class="material-icons">textsms</i>
                             <p>Daftar Konten</p>
                         </a>
