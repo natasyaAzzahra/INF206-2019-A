@@ -31,4 +31,14 @@ class Home extends CI_Controller
 		$this->load->view('fitur/viewwawasan');
 		$this->load->view('templates/user/footer');
 	}
+	// fungsi untuk menampilkan halaman fitur peraturan undang undang
+	public function peraturan()
+	{
+		$data['user'] = $this->db->get_where('user', ['username' => $this->session->userdata('username')])->row_array();
+		$data['data'] = 'Peraturan UU';
+		$data['alluud'] = $this->User_model->getAllUud();
+		$this->load->view('templates/user/header', $data);
+		$this->load->view('fitur/viewperaturan');
+		$this->load->view('templates/user/footer');
+	}
 }
