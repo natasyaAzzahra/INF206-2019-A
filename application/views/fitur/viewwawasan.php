@@ -2,254 +2,32 @@
 	<div class="page-header header-filter" data-parallax="true" style="background-image: url('https://i.imgur.com/8SHVwNO.jpg')"></div>
 	<div class="main main-raised">
 		<!-- konten -->
-		<div class="container menu">
-			<div class="row align-items-center pb-2 pt-2">
-				<section class="category-page area-padding">
-					<div class="container">
-						<div class="row">
-							<!-- konten wawasan 1 -->
-							<div class="col-md-6 col-lg-4">
-								<div class="single-category">
-									<!-- foto artikel -->
-									<div class="thumb">
-										<img class="img-fluid" src="../assets/img/2.jpg" alt="">
-									</div>
-									<div class="short_details">
-										<!--  tanggal dan kategori artikel -->
-										<div class="meta-top d-flex">
-											<a href="#">shoes </a>/
-											<a href="#"> March 15, 2019</a>
-										</div>
-										<!-- judul artikel -->
-										<a class="d-block" href="single-blog.html">
-											<h4>Shall for rule whose toge one
-												may heaven to dat</h4>
-										</a>
-										<!-- jumlah komentar dan suka artikel -->
-										<div class="meta-bottom d-flex">
-											<a href="#"><i class="ti-comment"></i>05 comment</a>
-											<a href="#"><i class="ti-heart"></i> 0 like</a>
-										</div>
-									</div>
+		<div class="container">
+			<div class="row justify-content-center pb-2 pt-2">
+				<h3>Daftar Konten</h3>
+			</div>
+			<div class="row">
+				<?php foreach ($allkonten as $ak) : ?>
+					<div class="col-md-4">
+						<div class="card" style="width: 20rem;">
+							<img class="card-img-top" src="<?= base_url('assets/img/konten/' . $ak['image']); ?>" alt="Card image cap" width="250px" height="250px" style="padding:5px;">
+							<div class="card-body pb-0">
+								<span class="card-text"><?= $ak['judul']; ?></span>
+								<br>
+								<small style="color:red;"><?= $ak['genre'] ?> / <?= date('d F Y', $ak['date_created']); ?></small>
+								<div class="pb-3 text-center">
+									<a href="<?= base_url('profil/kontendetail/' . $ak['id']) ?>" class="btn btn-success float-center mt-2">
+										Read More
+									</a>
 								</div>
-							</div>
-							<!-- konten wawasan 2 -->
-							<div class="col-md-6 col-lg-4">
-								<div class="single-category">
-									<!-- foto artikel -->
-									<div class="thumb">
-										<img class="img-fluid" src="../assets/img/1.jpg" alt="">
-									</div>
-									<!--  tanggal dan kategori artikel -->
-									<div class="short_details">
-										<div class="meta-top d-flex">
-											<a href="#">Fashion </a>/
-											<a href="#"> March 15, 2019</a>
-										</div>
-										<!-- judul artikel -->
-										<a class="d-block" href="single-blog.html">
-											<h4>Whose can you're together
-												first dominion man</h4>
-										</a>
-										<!-- jumlah komentar dan suka artikel -->
-										<div class="meta-bottom d-flex">
-											<a href="#"><i class="ti-comment"></i>08 comment</a>
-											<a href="#"><i class="ti-heart"></i> 0 like</a>
-										</div>
-									</div>
-								</div>
-							</div>
-							<!-- konten wawasan 3 -->
-							<div class="col-md-6 col-lg-4">
-								<div class="single-category">
-									<!-- foto artikel -->
-									<div class="thumb">
-										<img class="img-fluid" src="../assets/img/4.jpg" alt="">
-									</div>
-									<!--  tanggal dan kategori artikel -->
-									<div class="short_details">
-										<div class="meta-top d-flex">
-											<a href="#">shoes </a>/
-											<a href="#"> March 19, 2019</a>
-										</div>
-										<!-- judul artikel -->
-										<a class="d-block" href="single-blog.html">
-											<h4>Multiply blessed light unto
-												green moving</h4>
-										</a>
-										<!-- jumlah komentar dan suka artikel -->
-										<div class="meta-bottom d-flex">
-											<a href="#"><i class="ti-comment"></i>25 comment</a>
-											<a href="#"><i class="ti-heart"></i>15 like</a>
-										</div>
-									</div>
-								</div>
-							</div>
-							<!-- konten wawasan 4 -->
-							<div class="col-md-6 col-lg-4">
-								<div class="single-category">
-									<!-- foto artikel -->
-									<div class="thumb">
-										<img class="img-fluid" src="../assets/img/3.jpg" alt="">
-									</div>
-									<!--  tanggal dan kategori artikel -->
-									<div class="short_details">
-										<div class="meta-top d-flex">
-											<a href="#">shoes </a>/
-											<a href="#"> March 15, 2019</a>
-										</div>
-										<!-- judul artikel -->
-										<a class="d-block" href="single-blog.html">
-											<h4>Given moved air be a male
-												earth called multiply</h4>
-										</a>
-										<!-- jumlah komentar dan suka artikel -->
-										<div class="meta-bottom d-flex">
-											<a href="#"><i class="ti-comment"></i>05 comment</a>
-											<a href="#"><i class="ti-heart"></i> 10 like</a>
-										</div>
-									</div>
-								</div>
-							</div>
-							<!-- konten wawasan 5 -->
-							<div class="col-md-6 col-lg-4">
-								<div class="single-category">
-									<!-- foto artikel -->
-									<div class="thumb">
-										<img class="img-fluid" src="../assets/img/5.jpg" alt="">
-									</div>
-									<!--  tanggal dan kategori artikel -->
-									<div class="short_details">
-										<div class="meta-top d-flex">
-											<a href="#">shoes </a>/
-											<a href="#"> March 15, 2019</a>
-										</div>
-										<!-- judul artikel -->
-										<a class="d-block" href="single-blog.html">
-											<h4>Shall for rule whose toge one
-												may heaven to dat</h4>
-										</a>
-										<!-- jumlah komentar dan suka artikel -->
-										<div class="meta-bottom d-flex">
-											<a href="#"><i class="ti-comment"></i>05 comment</a>
-											<a href="#"><i class="ti-heart"></i> 20 like</a>
-										</div>
-									</div>
-								</div>
-							</div>
-							<!-- konten wawasan 6 -->
-							<div class="col-md-6 col-lg-4">
-								<div class="single-category">
-									<!-- foto artikel -->
-									<div class="thumb">
-										<img class="img-fluid" src="../assets/img/7.jpg" alt="">
-									</div>
-									<!--  tanggal dan kategori artikel -->
-									<div class="short_details">
-										<div class="meta-top d-flex">
-											<a href="#">shoes </a>/
-											<a href="#"> March 15, 2019</a>
-										</div>
-										<!-- judul artikel -->
-										<a class="d-block" href="single-blog.html">
-											<h4>Given moved air be a male
-												earth called multiply</h4>
-										</a>
-										<!-- jumlah komentar dan suka artikel -->
-										<div class="meta-bottom d-flex">
-											<a href="#"><i class="ti-comment"></i>25 comment</a>
-											<a href="#"><i class="ti-heart"></i> 0 like</a>
-										</div>
-									</div>
-								</div>
-							</div>
-							<!-- konten wawasan 7 -->
-							<div class="col-md-6 col-lg-4">
-								<div class="single-category">
-									<!-- foto artikel -->
-									<div class="thumb">
-										<img class="img-fluid" src="../assets/img/6.jpg" alt="">
-									</div>
-									<!--  tanggal dan kategori artikel -->
-									<div class="short_details">
-										<div class="meta-top d-flex">
-											<a href="#">shoes </a>/
-											<a href="#"> March 15, 2019</a>
-										</div>
-										<!-- judul artikel -->
-										<a class="d-block" href="single-blog.html">
-											<h4>Multiply blessed light unto
-												green moving</h4>
-										</a>
-										<!-- jumlah komentar dan suka artikel -->
-										<div class="meta-bottom d-flex">
-											<a href="#"><i class="ti-comment"></i>05 comment</a>
-											<a href="#"><i class="ti-heart"></i> 0 like</a>
-										</div>
-									</div>
-								</div>
-							</div>
-							<!-- konten wawasan 8 -->
-							<div class="col-md-6 col-lg-4">
-								<div class="single-category">
-									<!-- foto artikel -->
-									<div class="thumb">
-										<img class="img-fluid" src="../assets/img/9.jpg" alt="">
-									</div>
-									<!--  tanggal dan kategori artikel -->
-									<div class="short_details">
-										<div class="meta-top d-flex">
-											<a href="#">shoes </a>/
-											<a href="#"> March 15, 2019</a>
-										</div>
-										<!-- judul artikel -->
-										<a class="d-block" href="single-blog.html">
-											<h4>Shall for rule whose toge one
-												may heaven to dat</h4>
-										</a>
-										<!-- jumlah komentar dan suka artikel -->
-										<div class="meta-bottom d-flex">
-											<a href="#"><i class="ti-comment"></i>05 comment</a>
-											<a href="#"><i class="ti-heart"></i> 0 like</a>
-										</div>
-									</div>
-								</div>
-							</div>
-							<!-- konten wawasan 9 -->
-							<div class="col-md-6 col-lg-4">
-								<div class="single-category">
-									<!-- foto artikel -->
-									<div class="thumb">
-										<img class="img-fluid" src="../assets/img/8.jpg" alt="">
-									</div>
-									<!--  tanggal dan kategori artikel -->
-									<div class="short_details">
-										<div class="meta-top d-flex">
-											<a href="#">shoes </a>/
-											<a href="#"> March 15, 2019</a>
-										</div>
-										<!-- judul artikel -->
-										<a class="d-block" href="single-blog.html">
-											<h4>Given moved air be a male
-												earth called multiply</h4>
-										</a>
-										<!-- jumlah komentar dan suka artikel -->
-										<div class="meta-bottom d-flex">
-											<a href="#"><i class="ti-comment"></i>05 comment</a>
-											<a href="#"><i class="ti-heart"></i> 0 like</a>
-										</div>
-									</div>
-								</div>
-							</div>
-							<!-- Untuk tombol artikel lainnya-->
-							<div class="col-12 text-center">
-								<a href="" class="main_btn">Load More <span class="ti-angle-double-right"></span></a>
 							</div>
 						</div>
 					</div>
-				</section>
+				<?php endforeach; ?>
 			</div>
 		</div>
-		<!-- end of konten -->
+	</div>
+	</div>
+	<!-- end of konten -->
 	</div>
 </body>
