@@ -21,26 +21,6 @@
                 <div class="description text-justify mt-0">
                     <p><?= $user['bio']; ?></p>
                 </div>
-                <div class="row">
-                    <div class="col-md-4 ml-auto mr-auto">
-                        <div class="profile-tabs">
-                            <ul class="nav nav-pills nav-pills-icons justify-content-center" role="tablist">
-                                <!-- button untuk memilih halaman konten saya -->
-                                <li class="nav-item">
-                                    <a class="nav-link active" href="#konten" role="tab" data-toggle="tab" id="konten_saya">
-                                        Konten Saya
-                                    </a>
-                                </li>
-                                <!-- button untuk memilih halaman tambah konten -->
-                                <li class="nav-item">
-                                    <a class="nav-link" href="#artikel" role="tab" data-toggle="tab" id="tambah">
-                                        Tambah Konten
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
                 <div class="container">
                     <div class="row justify-content-center mt-4">
                         <div class="col-md-9">
@@ -50,41 +30,17 @@
                 </div>
                 <section class="category-page area-padding">
                     <div class="container">
-                        <div class="row" id="panel1">
-                            <?php foreach ($userkonten as $uk) : ?>
-                                <div class="col-md-4">
-                                    <div class="card" style="width: 20rem;">
-                                        <img class="card-img-top" src="<?= base_url('assets/img/konten/' . $uk['image']); ?>" alt="Card image cap" width="250px" height="250px" style="padding:5px;">
-                                        <div class="card-body pb-0">
-                                            <span class="card-text"><?= $uk['judul']; ?></span>
-                                            <br>
-                                            <small style="color:red;"><?= $uk['genre'] ?> / <?= date('d F Y', $uk['date_created']); ?></small>
-                                            <div class="pb-3">
-                                                <a href="<?= base_url('profil/editkonten/' . $uk['id']); ?>" class="badge badge-primary mt-2">
-                                                    Edit konten
-                                                </a>
-                                                <a href="<?= base_url('profil/kontendetail/' . $uk['id']); ?>" class="badge badge-success mt-2">
-                                                    Detail
-                                                </a>
-                                                <a href="<?= base_url('profil/hapuskonten/' . $uk['id']); ?>" class="badge badge-danger mt-2" onclick="return confirm('Yakin?');">
-                                                    Hapus konten
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            <?php endforeach; ?>
-                        </div>
-                        <div class="row justify-content-center" id="panel2">
+                        <div class="row justify-content-center">
                             <div class="col-md-9">
-                                <?php echo form_open_multipart('profil/konten'); ?>
+                                <?php echo form_open_multipart('profil/editkonten/' . $konten['id']); ?>
+                                <input type="hidden" name="id" id="id" value="<?= $konten['id']; ?>">
                                 <div class="form-group pb-0 mb-0 input-group">
                                     <div class="input-group-prepend">
                                         <span class="input-group-text">
                                             <i class="fas fa-newspaper"></i>
                                         </span>
                                     </div>
-                                    <input type="text" class="form-control" name="judul" placeholder="Masukkan Judul Konten" value="<?= set_value('judul') ?>">
+                                    <input type="text" class="form-control" name="judul" placeholder="Masukkan Judul Konten" value="<?= $konten['judul']; ?>">
                                 </div>
                                 <?= form_error('judul', '<small class="text-danger pl-5">', '</small>'); ?>
                                 <div class="form-group pt-0 pb-0 mb-0 mt-0 input-group">
@@ -119,10 +75,10 @@
                                 </div>
                                 <div class="form-group mt-0">
                                     <label for="isi">Masukkan Deskripsi Konten</label>
-                                    <textarea class="form-control" id="isi" name="isi" rows="8"></textarea>
+                                    <textarea class="form-control" id="isi" name="isi" rows="8"><?= $konten['isi']; ?></textarea>
                                     <?= form_error('isi', '<small class="text-danger">', '</small>'); ?>
                                 </div>
-                                <button type="submit" class="btn btn-primary mt-3">Submit</button>
+                                <button type="submit" class="btn btn-primary mt-3 float-right">Ubah Konten</button>
                                 </form>
                             </div>
                         </div>
