@@ -47,12 +47,6 @@
                             <p>Daftar User</p>
                         </a>
                     </li>
-                    <!-- <li class="nav-item ">
-                        <a class="nav-link" href="#">
-                            <i class="material-icons">content_paste</i>
-                            <p>Table List</p>
-                        </a>
-                    </li> -->
                     <li class="nav-item">
                         <a class="nav-link" href="#">
                             <i class="material-icons">textsms</i>
