@@ -91,4 +91,20 @@ class Admin extends CI_Controller
         </div>');
         redirect('admin/uud');
     }
+
+    // fungsi untuk menampilkan halaman daftar konten yang sudah diupload oleh konten creator
+    public function daftarkonten()
+    {
+        if ($this->session->userdata('username')) {
+            $data['user'] = $this->db->get_where('user', ['username' => $this->session->userdata('username')])->row_array();
+            $data['title'] = 'Daftar Konten';
+            $data['data'] = 'Daftar Konten';
+            $data['allkonten'] = $this->User_model->getAllKonten();
+            $this->load->view('templates/admin/header', $data);
+            $this->load->view('admin/viewdaftarkonten', $data);
+            $this->load->view('templates/admin/footer');
+        } else {
+            redirect('login');
+        }
+    }
 }
