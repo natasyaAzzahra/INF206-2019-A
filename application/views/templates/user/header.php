@@ -33,7 +33,7 @@
 						<a href="<?= base_url('home/wawasan') ?>" class="nav-link">Wawasan</a>
 					</li>
 					<li class="nav-item">
-						<a href="#" class="nav-link">Peraturan UU</a>
+						<a href="<?= base_url('home/peraturan') ?>" class="nav-link">Peraturan UU</a>
 					</li>
 					<li class="nav-item">
 						<a href="#" class="nav-link">Forum</a>
