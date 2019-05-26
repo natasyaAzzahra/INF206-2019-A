@@ -82,6 +82,34 @@ class Admin extends CI_Controller
         }
     }
 
+    //function untuk halaman mengubah peraturan di admin
+    public function ubahuud($id)
+    {
+        if ($this->session->userdata('username')) {
+            $data['user'] = $this->db->get_where('user', ['username' => $this->session->userdata('username')])->row_array();
+            $data['title'] = 'Peraturan UU';
+            $data['data'] = 'Ubah Peraturan UU';
+            $data['uud'] = $this->User_model->getUudById($id);
+
+            $this->form_validation->set_rules('judul', 'Judul', 'trim|required');
+            $this->form_validation->set_rules('isi', 'Isi', 'trim|required');
+
+            if ($this->form_validation->run() == false) {
+                $this->load->view('templates/admin/header', $data);
+                $this->load->view('admin/viewubahuud', $data);
+                $this->load->view('templates/admin/footer');
+            } else {
+                $this->User_model->edituud();
+                $this->session->set_flashdata('pesan', '<div class="alert alert-success" role="alert" style="text-align: center">
+                Peraturan Undang-undang berhasil diubah!
+                </div>');
+                redirect('admin/uud');
+            }
+        } else {
+            redirect('login');
+        }
+    }
+    
     //function untuk menghapus uud di admin
     public function hapusuud($id)
     {
