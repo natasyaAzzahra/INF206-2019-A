@@ -80,6 +80,15 @@ class Profil extends CI_Controller
             </div>');
             redirect('profil/konten');
         }
+
+        // kondisi untuk admin ketika ingin menghapus konten
+        elseif ($this->session->userdata('role_id') == 1) {
+            $this->User_model->hapusKonten($id);
+            $this->session->set_flashdata('pesan', '<div class="alert alert-success" role="alert" style="text-align: center">
+            Konten berhasil dihapus!
+            </div>');
+            redirect('admin/daftarkonten');
+        }
     }
 
     // fungsi untuk menampilkan detail konten berdasarkan id

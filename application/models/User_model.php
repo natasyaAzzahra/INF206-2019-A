@@ -180,4 +180,10 @@ class User_model extends CI_Model
     {
         return $this->db->get_where('konten', ['id' => $id])->row_array();
     }
+
+     // fungsi untuk menampilkan semua konten yg diupload oleh konten creator di halaman wawasan
+    public function getAllKonten()
+    {
+        return $this->db->get('konten')->result_array();
+    }
 }
