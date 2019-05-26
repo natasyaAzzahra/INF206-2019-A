@@ -9,12 +9,12 @@
                             </a>
                         </li>
                         <li>
-                            <a href="#">
+                            <a href="<?= base_url('info') ?>">
                                 About Us
                             </a>
                         </li>
                         <li>
-                            <a href="#">
+                            <a href="<?= base_url('info/kontak') ?>">
                                 contact us
                             </a>
                         </li>

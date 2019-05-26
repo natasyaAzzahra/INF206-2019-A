@@ -18,7 +18,7 @@
 	<nav class="navbar navbar-transparent bg-dark navbar-color-on-scroll fixed-top navbar-expand-lg" color-on-scroll="100">
 		<div class="container">
 			<div class="navbar-translate">
-				<a class="navbar-brand" href="<?= base_url(); ?>Home">Nelayan Belajar</a>
+				<a class="navbar-brand" href="<?= base_url(); ?>home">Nelayan Belajar</a>
 				<button class="navbar-toggler" type="button" data-toggle="collapse" aria-expanded="false" aria-label="Toggle navigation">
 					<span class="sr-only">Toggle navigation</span>
 					<span class="navbar-toggler-icon"></span>
@@ -30,7 +30,7 @@
 			<div class="collapse navbar-collapse">
 				<ul class="navbar-nav">
 					<li class="nav-item">
-						<a href="<?= base_url('Home/wawasan') ?>" class="nav-link">Wawasan</a>
+						<a href="<?= base_url('home/wawasan') ?>" class="nav-link">Wawasan</a>
 					</li>
 					<li class="nav-item">
 						<a href="#" class="nav-link">Peraturan UU</a>
@@ -55,7 +55,7 @@
 							<button class="btn bg-transparent btn-round" style="border:thick; color: grey;">Masuk</button>
 						</a>
 					<?php else : ?>
-						<img src="<?= base_url('assets/img/' . $user['image']); ?>" class="btn bg-transparent btn-just-icon rounded-circle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						<img src="<?= base_url('assets/img/profil/' . $user['image']); ?>" class="btn bg-transparent btn-just-icon rounded-circle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 						<div class="dropdown-menu">
 							<label class="dropdown-item"><?= $user['namalengkap'] ?></label>
 							<div class="dropdown-divider"></div>

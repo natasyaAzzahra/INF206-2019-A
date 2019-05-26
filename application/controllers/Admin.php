@@ -9,6 +9,7 @@ class Admin extends CI_Controller
         $this->load->model('User_model');
         $this->load->library('form_validation');
 
+        // kondisi ketika user ingin masuk ke halaman admin, maka user tersebut akan di lemparkan ke halaman home(middleware)
         if ($this->session->userdata('role_id') == 2) {
             redirect('home');
         } else if (!$this->session->userdata('username')) {

@@ -9,7 +9,7 @@
                         <!-- foto profile dari user -->
                         <div class="profile">
                             <div class="avatar">
-                                <img src="<?= base_url('assets/img/' . $user['image']); ?>" alt="Circle Image" class="img-raised rounded-circle img-fluid">
+                                <img src="<?= base_url('assets/img/profil/' . $user['image']); ?>" alt="Circle Image" class="img-raised rounded-circle img-fluid">
                             </div>
                             <div class="name">
                                 <h3 class="title"><?= $user['namalengkap']; ?></h3>
@@ -18,8 +18,8 @@
                     </div>
                 </div>
                 <!-- bio dari user -->
-                <div class="description text-center">
-                    <p>Kehidupan nelayan juga merupakan kebaikan karena dengan aktivitas ini banyak keluarga bisa makan ikan dan aktivitas yang menantang melawan laut dan menjadi alasan saya untuk berbagi pengetahuan agar semu nelayan ama dan lancar dalam meulaut. </p>
+                <div class="description text-justify mt-0">
+                    <p><?= $user['bio']; ?></p>
                 </div>
                 <div class="row">
                     <div class="col-md-4 ml-auto mr-auto">
@@ -27,15 +27,13 @@
                             <ul class="nav nav-pills nav-pills-icons justify-content-center" role="tablist">
                                 <!-- button untuk memilih halaman konten saya -->
                                 <li class="nav-item">
-                                    <a class="nav-link active" href="#konten" role="tab" data-toggle="tab">
-                                        <!-- <i class="material-icons">favorite</i> -->
+                                    <a class="nav-link active" href="#konten" role="tab" data-toggle="tab" id="konten_saya">
                                         Konten Saya
                                     </a>
                                 </li>
                                 <!-- button untuk memilih halaman tambah konten -->
                                 <li class="nav-item">
-                                    <a class="nav-link" href="#artikel" role="tab" data-toggle="tab">
-                                        <!-- <i class="material-icons">add</i> -->
+                                    <a class="nav-link" href="#artikel" role="tab" data-toggle="tab" id="tambah">
                                         Tambah Konten
                                     </a>
                                 </li>
@@ -43,180 +41,89 @@
                         </div>
                     </div>
                 </div>
-                <br><br>
+                <div class="container">
+                    <div class="row justify-content-center mt-4">
+                        <div class="col-md-9">
+                            <?= $this->session->flashdata('pesan'); ?>
+                        </div>
+                    </div>
+                </div>
                 <section class="category-page area-padding">
                     <div class="container">
-                        <div class="row">
-                            <!-- artikel 1 -->
-                            <div class="col-md-6 col-lg-4">
-                                <div class="single-category">
-                                    <div class="thumb">
-                                        <img class="img-fluid" src="../assets/img/gambar1.jpg" alt="">
-                                    </div>
-                                    <div class="short_details">
-                                        <div class="meta-top d-flex">
-                                            <a href="#">Artikel </a>/
-                                            <a href="#"> 2 April 2019</a>
-                                        </div>
-                                        <a class="d-block" href="single-blog.html">
-                                            <h4>Cara Mencari Waktu Terbaik untuk Memancing</h4>
-                                        </a>
-                                        <div class="meta-bottom d-flex">
-                                            <a href="#"><i class="ti-comment"></i>5 kometar</a>
-                                            <a href="#"><i class="ti-heart"></i> 1 suka</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- artikel 2 -->
-                            <div class="col-md-6 col-lg-4">
-                                <div class="single-category">
-                                    <div class="thumb">
-                                        <img class="img-fluid" src="../assets/img/gambar2.jpg" alt="">
-                                    </div>
-                                    <div class="short_details">
-                                        <div class="meta-top d-flex">
-                                            <a href="#">artikel </a>/
-                                            <a href="#"> 15 Maret 2019</a>
-                                        </div>
-                                        <a class="d-block" href="single-blog.html">
-                                            <h4>Masih Banyak Nelayan Lokal yang Melanggar...</h4>
-                                        </a>
-                                        <div class="meta-bottom d-flex">
-                                            <a href="#"><i class="ti-comment"></i>8 kometar</a>
-                                            <a href="#"><i class="ti-heart"></i> 12 like</a>
+                        <div class="row" id="panel1">
+                            <?php foreach ($userkonten as $uk) : ?>
+                                <div class="col-md-4">
+                                    <div class="card" style="width: 20rem;">
+                                        <img class="card-img-top" src="<?= base_url('assets/img/konten/' . $uk['image']); ?>" alt="Card image cap" width="250px" height="250px" style="padding:5px;">
+                                        <div class="card-body pb-0">
+                                            <span class="card-text"><?= $uk['judul']; ?></span>
+                                            <br>
+                                            <small style="color:red;"><?= $uk['genre'] ?> / <?= date('d F Y', $uk['date_created']); ?></small>
+                                            <div class="pb-3">
+                                                <!-- <a href="<?= base_url('profil/editkonten/' . $uk['id']); ?>" class="badge badge-primary mt-2">
+                                                        Edit konten
+                                                    </a> -->
+                                                <a href="<?= base_url('profil/kontendetail/' . $uk['id']); ?>" class="badge badge-success mt-2">
+                                                    Detail
+                                                </a>
+                                                <a href="<?= base_url('profil/hapuskonten/' . $uk['id']); ?>" class="badge badge-danger mt-2" onclick="return confirm('Yakin?');">
+                                                    Hapus konten
+                                                </a>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                            <!-- artikel 3 -->
-                            <div class="col-md-6 col-lg-4">
-                                <div class="single-category">
-                                    <div class="thumb">
-                                        <img class="img-fluid" src="../assets/img/gambar3.jpg" alt="">
+                            <?php endforeach; ?>
+                        </div>
+                        <div class="row justify-content-center" id="panel2">
+                            <div class="col-md-9">
+                                <?php echo form_open_multipart('profil/konten'); ?>
+                                <div class="form-group pb-0 mb-0 input-group">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text">
+                                            <i class="fas fa-newspaper"></i>
+                                        </span>
                                     </div>
-                                    <div class="short_details">
-                                        <div class="meta-top d-flex">
-                                            <a href="#">Artikel </a>/
-                                            <a href="#"> 23 Maret 2019</a>
-                                        </div>
-                                        <a class="d-block" href="single-blog.html">
-                                            <h4>Menghitung BBM Kapal Laut</h4>
-                                        </a>
-                                        <div class="meta-bottom d-flex">
-                                            <a href="#"><i class="ti-comment"></i>20 Komentar</a>
-                                            <a href="#"><i class="ti-heart"></i>5 Suka</a>
-                                        </div>
-                                    </div>
+                                    <input type="text" class="form-control" name="judul" placeholder="Masukkan Judul Konten" value="<?= set_value('judul') ?>">
                                 </div>
-                            </div>
-                            <!-- artikel atau koten ke 4 -->
-                            <div class="col-md-6 col-lg-4">
-                                <div class="single-category">
-                                    <div class="thumb">
-                                        <img class="img-fluid" src="../assets/img/gambar4.jpg" alt="">
+                                <?= form_error('judul', '<small class="text-danger pl-5">', '</small>'); ?>
+                                <div class="form-group pt-0 pb-0 mb-0 mt-0 input-group">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text">
+                                            <i class="fas fa-hand-pointer"></i>
+                                        </span>
                                     </div>
-                                    <div class="short_details">
-                                        <div class="meta-top d-flex">
-                                            <a href="#">video</a>/
-                                            <a href="#"> 31 Januari 2019</a>
-                                        </div>
-                                        <a class="d-block" href="single-blog.html">
-                                            <h4>SOLUSI PAMUNGKAS ATASI MABUK LAUT</h4>
-                                        </a>
-                                        <div class="meta-bottom d-flex">
-                                            <a href="#"><i class="ti-comment"></i>0 Komentar</a>
-                                            <a href="#"><i class="ti-heart"></i> 2 Suka</a>
-                                        </div>
-                                    </div>
+                                    <select class="form-control selectpicker" name="genre" data-style="btn btn-link" id="konten">
+                                        <option value="">Pilih Jenis Konten</option>
+                                        <option value="Artikel">Artikel</option>
+                                        <option value="Video">Video</option>
+                                    </select>
                                 </div>
-                            </div>
-                            <!--konten ke 5 -->
-                            <div class="col-md-6 col-lg-4">
-                                <div class="single-category">
-                                    <div class="thumb">
-                                        <img class="img-fluid" src="../assets/img/gambar5.jpg" alt="">
+                                <?= form_error('genre', '<small class="text-danger pl-5">', '</small>'); ?>
+                                <div class="form-group pt-0 pb-0 mt-0 input-group" id="vids">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text">
+                                            <i class="fas fa-video"></i>
+                                        </span>
                                     </div>
-                                    <div class="short_details">
-                                        <div class="meta-top d-flex">
-                                            <a href="#">Video </a>/
-                                            <a href="#"> 13 Februari 2019</a>
-                                        </div>
-                                        <a class="d-block" href="single-blog.html">
-                                            <h4>Ini yang Wajib Dipatuhi Nelayan Agar Selamat...</h4>
-                                        </a>
-                                        <div class="meta-bottom d-flex">
-                                            <a href="#"><i class="ti-comment"></i>12 komentar</a>
-                                            <a href="#"><i class="ti-heart"></i> 20 suka</a>
-                                        </div>
-                                    </div>
+                                    <input type="text" name="video" class="form-control" id="vids" placeholder="Masukkan Link Video YouTube">
                                 </div>
-                            </div>
-                            <!-- konten ke 6 -->
-                            <div class="col-md-6 col-lg-4">
-                                <div class="single-category">
-                                    <div class="thumb">
-                                        <img class="img-fluid" src="../assets/img/gambar6.jpg" alt="">
+                                <div class="form-control pt-0 pb-0 mb-0 mt-3 input-group">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text">
+                                            <i class="fas fa-images"></i>
+                                        </span>
                                     </div>
-                                    <div class="short_details">
-                                        <div class="meta-top d-flex">
-                                            <a href="#">Video </a>/
-                                            <a href="#"> 6 Februari 2019</a>
-                                        </div>
-                                        <a class="d-block" href="single-blog.html">
-                                            <h4>Cara menggunakan jala </h4>
-                                        </a>
-                                        <div class="meta-bottom d-flex">
-                                            <a href="#"><i class="ti-comment"></i>3 komentar</a>
-                                            <a href="#"><i class="ti-heart"></i> 0 suka</a>
-                                        </div>
-                                    </div>
+                                    <input name="image" type="file" id="file" class="d-none">
+                                    <label class="inputFileHidden" for="file">Klik untuk memasukkan foto Konten</label>
                                 </div>
-                            </div>
-                            <!-- konten ke 7 -->
-                            <div class="col-md-6 col-lg-4">
-                                <div class="single-category">
-                                    <div class="thumb">
-                                        <img class="img-fluid" src="../assets/img/gambar7.jpg" alt="">
-                                    </div>
-                                    <div class="short_details">
-                                        <div class="meta-top d-flex">
-                                            <a href="#">Artikel </a>/
-                                            <a href="#"> 14 Jauari 2019</a>
-                                        </div>
-                                        <a class="d-block" href="single-blog.html">
-                                            <h4>Seperti Ini Bentuk dan Cara Kerja Cantrang yang Membuatnya...</h4>
-                                        </a>
-                                        <div class="meta-bottom d-flex">
-                                            <a href="#"><i class="ti-comment"></i>12 Komentar</a>
-                                            <a href="#"><i class="ti-heart"></i> 2 Suka</a>
-                                        </div>
-                                    </div>
+                                <div class="form-group mt-0">
+                                    <label for="isi">Masukkan Deskripsi Konten</label>
+                                    <textarea class="form-control" id="isi" name="isi" rows="8"></textarea>
+                                    <?= form_error('isi', '<small class="text-danger">', '</small>'); ?>
                                 </div>
-                            </div>
-                            <!-- konten ke 8 -->
-                            <div class="col-md-6 col-lg-4">
-                                <div class="single-category">
-                                    <div class="thumb">
-                                        <img class="img-fluid" src="../assets/img/gambar8.jpg" alt="">
-                                    </div>
-                                    <div class="short_details">
-                                        <div class="meta-top d-flex">
-                                            <a href="#">video</a>/
-                                            <a href="#"> 1 Desember 2019</a>
-                                        </div>
-                                        <a class="d-block" href="single-blog.html">
-                                            <h4>sosok hebat perempuan nelayan</h4>
-                                        </a>
-                                        <div class="meta-bottom d-flex">
-                                            <a href="#"><i class="ti-comment"></i>5 komentar</a>
-                                            <a href="#"><i class="ti-heart"></i> 23 Suka</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-12 text-center">
-                                <a href="" class="main_btn">Load More <span class="ti-angle-double-right"></span></a>
+                                <button type="submit" class="btn btn-primary mt-3">Submit</button>
+                                </form>
                             </div>
                         </div>
                     </div>
