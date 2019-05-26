@@ -21,8 +21,8 @@ class Register extends CI_Controller
     public function tambah()
     {
         $this->form_validation->set_rules('namelengkap', 'Namalengkap', 'trim');
-        $this->form_validation->set_rules('username', 'Username', 'trim');
-        $this->form_validation->set_rules('email', 'Email', 'trim');
+        $this->form_validation->set_rules('username', 'Username', 'trim|is_unique[user.username]');
+        $this->form_validation->set_rules('email', 'Email', 'trim|is_unique[user.email]');
         $this->form_validation->set_rules('password', 'Password', 'trim|min_length[6]');
 
         //kondisi ketika tidak berhasil mendaftar
