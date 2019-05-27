@@ -130,7 +130,7 @@ class User_model extends CI_Model
         $this->db->where('id', $this->input->post('id'));
         $this->db->update('undang', $data);
     }
-    
+
     // fungsi untuk menampilkan semua uud
     public function getAllUud()
     {
@@ -239,5 +239,18 @@ class User_model extends CI_Model
             }
         }
         redirect('profil/konten');
+    }
+
+    public function get_keyword($keyword)
+    {
+        $this->db->select('*');
+        $this->db->from('konten');
+        $this->db->like('judul', $keyword);
+        $this->db->or_like('user_id', $keyword);
+        $this->db->or_like('username', $keyword);
+        $this->db->or_like('judul', $keyword);
+        $this->db->or_like('genre', $keyword);
+        $this->db->or_like('isi', $keyword);
+        return $this->db->get()->result();
     }
 }

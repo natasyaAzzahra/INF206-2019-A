@@ -32,7 +32,7 @@ class Home extends CI_Controller
 		$this->load->view('fitur/viewwawasan');
 		$this->load->view('templates/user/footer');
 	}
-	
+
 	// fungsi untuk menampilkan halaman fitur peraturan undang undang
 	public function peraturan()
 	{
