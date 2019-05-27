@@ -43,7 +43,6 @@
 				<form class="form-inline ml-auto nav-item navbar-nav" action="<?= base_url('profil/pencarian') ?>" method="post">
 					<div class="form-group no-border pr-4">
 						<input type="text" class="form-control place" name="keyword" placeholder="Cari" style="color: grey;">
-
 					</div>
 					<!-- <button type="submit" class="btn bg-transparent btn-just-icon btn-round" style="color: grey;">
                         <i class="material-icons">search</i>
