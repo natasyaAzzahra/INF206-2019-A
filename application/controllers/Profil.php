@@ -9,6 +9,7 @@ class Profil extends CI_Controller
     {
         parent::__construct();
         $this->load->model('User_model');
+        $this->load->model('Konten_model');
         $this->load->library('form_validation');
     }
 
@@ -53,7 +54,7 @@ class Profil extends CI_Controller
             //kondisi ketika user telah melakukan login
             if ($this->session->userdata('username')) {
                 $data['data'] = 'Konten Saya';
-                $data['userkonten'] = $this->User_model->getUserKonten();
+                $data['userkonten'] = $this->Konten_model->getUserKonten();
                 $this->load->view('templates/user/header', $data);
                 $this->load->view('fitur/viewkonten', $data);
                 $this->load->view('templates/user/footer');
@@ -65,7 +66,7 @@ class Profil extends CI_Controller
         }
         // kondisi ketika form sudah terisi
         else {
-            $this->User_model->tambahkonten();
+            $this->Konten_model->tambahkonten();
         }
     }
 
@@ -74,7 +75,7 @@ class Profil extends CI_Controller
     {
         // kondisi untuk content creator ketika ingin menghapus konten
         if ($this->session->userdata('role_id') == 2) {
-            $this->User_model->hapusKonten($id);
+            $this->Konten_model->hapusKonten($id);
             $this->session->set_flashdata('pesan', '<div class="alert alert-success" role="alert" style="text-align: center">
             Konten berhasil dihapus!
             </div>');
@@ -83,7 +84,7 @@ class Profil extends CI_Controller
 
         // kondisi untuk admin ketika ingin menghapus konten
         elseif ($this->session->userdata('role_id') == 1) {
-            $this->User_model->hapusKonten($id);
+            $this->Konten_model->hapusKonten($id);
             $this->session->set_flashdata('pesan', '<div class="alert alert-success" role="alert" style="text-align: center">
             Konten berhasil dihapus!
             </div>');
@@ -96,7 +97,7 @@ class Profil extends CI_Controller
     {
         $data['user'] = $this->db->get_where('user', ['username' => $this->session->userdata('username')])->row_array();
         $data['data'] = 'Detail Konten';
-        $data['konten'] = $this->User_model->getKontenById($id);
+        $data['konten'] = $this->Konten_model->getKontenById($id);
         $this->load->view('templates/user/header', $data);
         $this->load->view('fitur/viewdetail', $data);
         $this->load->view('templates/user/footer');
@@ -116,7 +117,7 @@ class Profil extends CI_Controller
             //kondisi ketika user telah melakukan login
             if ($this->session->userdata('username')) {
                 $data['data'] = 'Ubah Konten';
-                $data['konten'] = $this->User_model->getKontenById($id);
+                $data['konten'] = $this->Konten_model->getKontenById($id);
                 $this->load->view('templates/user/header', $data);
                 $this->load->view('fitur/viewubahkonten', $data);
                 $this->load->view('templates/user/footer');
@@ -128,7 +129,7 @@ class Profil extends CI_Controller
         }
         // kondisi ketika form sudah terisi
         else {
-            $this->User_model->editkonten();
+            $this->Konten_model->editkonten($id);
             redirect('profil/konten');
         }
     }
