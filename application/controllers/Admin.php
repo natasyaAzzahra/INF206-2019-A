@@ -7,6 +7,8 @@ class Admin extends CI_Controller
     {
         Parent::__construct();
         $this->load->model('User_model');
+        $this->load->model('Konten_model');
+        $this->load->model('Undang_model');
         $this->load->library('form_validation');
 
         // kondisi ketika user ingin masuk ke halaman admin, maka user tersebut akan di lemparkan ke halaman home(middleware)
@@ -61,7 +63,7 @@ class Admin extends CI_Controller
             $data['user'] = $this->db->get_where('user', ['username' => $this->session->userdata('username')])->row_array();
             $data['title'] = 'Peraturan UU';
             $data['data'] = 'Peraturan UU';
-            $data['alluud'] = $this->User_model->getAllUud();
+            $data['alluud'] = $this->Undang_model->getAllUud();
 
             $this->form_validation->set_rules('judul', 'Judul', 'trim|required');
             $this->form_validation->set_rules('isi', 'Isi', 'trim|required');
@@ -71,9 +73,37 @@ class Admin extends CI_Controller
                 $this->load->view('admin/viewuud', $data);
                 $this->load->view('templates/admin/footer');
             } else {
-                $this->User_model->tambahuud();
+                $this->Undang_model->tambahuud();
                 $this->session->set_flashdata('pesan', '<div class="alert alert-success" role="alert" style="text-align: center">
                 Peraturan Undang-undang berhasil ditambahkan!
+                </div>');
+                redirect('admin/uud');
+            }
+        } else {
+            redirect('login');
+        }
+    }
+
+    //function untuk halaman mengubah peraturan di admin
+    public function ubahuud($id)
+    {
+        if ($this->session->userdata('username')) {
+            $data['user'] = $this->db->get_where('user', ['username' => $this->session->userdata('username')])->row_array();
+            $data['title'] = 'Peraturan UU';
+            $data['data'] = 'Ubah Peraturan UU';
+            $data['uud'] = $this->Undang_model->getUudById($id);
+
+            $this->form_validation->set_rules('judul', 'Judul', 'trim|required');
+            $this->form_validation->set_rules('isi', 'Isi', 'trim|required');
+
+            if ($this->form_validation->run() == false) {
+                $this->load->view('templates/admin/header', $data);
+                $this->load->view('admin/viewubahuud', $data);
+                $this->load->view('templates/admin/footer');
+            } else {
+                $this->Undang_model->edituud();
+                $this->session->set_flashdata('pesan', '<div class="alert alert-success" role="alert" style="text-align: center">
+                Peraturan Undang-undang berhasil diubah!
                 </div>');
                 redirect('admin/uud');
             }
@@ -85,7 +115,7 @@ class Admin extends CI_Controller
     //function untuk menghapus uud di admin
     public function hapusuud($id)
     {
-        $this->User_model->hapusDataUud($id);
+        $this->Undang_model->hapusDataUud($id);
         $this->session->set_flashdata('pesan', '<div class="alert alert-success" role="alert" style="text-align: center">
         Data Undang-undang berhasil dihapus!
         </div>');
@@ -99,7 +129,7 @@ class Admin extends CI_Controller
             $data['user'] = $this->db->get_where('user', ['username' => $this->session->userdata('username')])->row_array();
             $data['title'] = 'Daftar Konten';
             $data['data'] = 'Daftar Konten';
-            $data['allkonten'] = $this->User_model->getAllKonten();
+            $data['allkonten'] = $this->Konten_model->getAllKonten();
             $this->load->view('templates/admin/header', $data);
             $this->load->view('admin/viewdaftarkonten', $data);
             $this->load->view('templates/admin/footer');

@@ -109,7 +109,7 @@
 						harus diketahui sebagai seorang nelayan. fitur ini disajikan secara sederhana dan mudah dipahami
 						bagi pihak yang menggunakannya.
 					</p>
-					<a href="#" class="btn btn-dark mt-4">Read More</a>
+					<a href="<?= base_url('home/peraturan') ?>" class="btn btn-dark mt-4">Read More</a>
 				</div>
 			</div>
 			<!-- gambaran umum fitur forum -->

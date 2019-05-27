@@ -33,9 +33,10 @@
                                             <td><?= $uud['isi']; ?></td>
                                             <td>
                                                 <!-- pilihan menghapus uud -->
-                                                <!-- <a href="<?= base_url() ?>admin/ubahuud/<?= $uud['id']; ?>" class="badge badge-primary" rel="tooltip" title="Ubah">
-                                                        <i class="fas fa-edit"></i>
-                                                    </a> -->
+                                                <a href="<?= base_url() ?>admin/ubahuud/<?= $uud['id']; ?>" class="badge badge-primary" rel="tooltip" title="Ubah">
+                                                    <i class="fas fa-edit"></i>
+                                                </a>
+                                                
                                                 <a href="<?= base_url() ?>admin/hapusuud/<?= $uud['id']; ?>" class="badge badge-danger" rel="tooltip" title="Hapus" onclick="return confirm('Yakin?');">
                                                     <i class="fas fa-trash"></i>
                                                 </a>
