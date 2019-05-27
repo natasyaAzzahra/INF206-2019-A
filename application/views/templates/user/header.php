@@ -54,26 +54,26 @@
 					<?php if (!isset($user['namalengkap'])) : ?>
 						<a href="<?= base_url(); ?>Login">
 							<button class="btn bg-transparent btn-round" style="border:thick; color: grey;">Masuk</button>
-							</>
-						<?php else : ?>
-							<img src="<?= base_url('assets/img/profil/' . $user['image']); ?>" class="btn bg-transparent btn-just-icon rounded-circle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-							<div class="dropdown-menu">
-								<label class="dropdown-item"><?= $user['namalengkap'] ?></label>
-								<div class="dropdown-divider"></div>
-								<a class="dropdown-item" href="<?= base_url('profil') ?>">
-									<i class="fas fa-user-edit fa-sm fa-fw mr-2 text-gray-400"></i>
-									Edit Profil
-								</a>
-								<a class="dropdown-item" href="<?= base_url('profil/konten') ?>">
-									<i class="fas fa-newspaper fa-sm fa-fw mr-2 text-gray-400"></i>
-									Konten Saya
-								</a>
-								<a class="dropdown-item" href="<?= base_url(); ?>Login/logout">
-									<i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
-									Keluar
-								</a>
-							</div>
-						<?php endif; ?>
+						</a>
+					<?php else : ?>
+						<img src="<?= base_url('assets/img/profil/' . $user['image']); ?>" class="btn bg-transparent btn-just-icon rounded-circle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						<div class="dropdown-menu">
+							<label class="dropdown-item"><?= $user['namalengkap'] ?></label>
+							<div class="dropdown-divider"></div>
+							<a class="dropdown-item" href="<?= base_url('profil') ?>">
+								<i class="fas fa-user-edit fa-sm fa-fw mr-2 text-gray-400"></i>
+								Edit Profil
+							</a>
+							<a class="dropdown-item" href="<?= base_url('profil/konten') ?>">
+								<i class="fas fa-newspaper fa-sm fa-fw mr-2 text-gray-400"></i>
+								Konten Saya
+							</a>
+							<a class="dropdown-item" href="<?= base_url(); ?>Login/logout">
+								<i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
+								Keluar
+							</a>
+						</div>
+					<?php endif; ?>
 				</div>
 			</div>
 		</div>
