@@ -36,7 +36,7 @@
 						<a href="<?= base_url('home/peraturan') ?>" class="nav-link">Peraturan UU</a>
 					</li>
 					<li class="nav-item">
-						<a href="#" class="nav-link">Forum</a>
+						<a href="<?= base_url('forum') ?>" class="nav-link">Forum</a>
 					</li>
 				</ul>
 

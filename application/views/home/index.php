@@ -129,7 +129,7 @@
 						anggota forum nelayan. Sehingga dengan adanya forum akan membuat metode diskusi menjadi lebih
 						baik.
 					</p>
-					<a href="#" class="btn btn-dark mt-4">Read More</a>
+					<a href="<?= base_url('forum') ?>" class="btn btn-dark mt-4">Read More</a>
 				</div>
 				<div class="col-lg-5">
 					<div class="section text-center">
