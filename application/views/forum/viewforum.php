@@ -28,7 +28,7 @@
                         <div class="card">
                             <div class="card-body ">
                                 <h4 class="card-title">
-                                    <a href="#"><?= $forum['pertanyaan'] ?></a>
+                                    <a href="<?= base_url('forum/detailforum/' . $forum['id']); ?>"><?= $forum['pertanyaan'] ?></a>
                                 </h4>
                             </div>
                             <div class="card-footer ">
