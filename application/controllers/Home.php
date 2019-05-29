@@ -8,6 +8,8 @@ class Home extends CI_Controller
 	{
 		Parent::__construct();
 		$this->load->model('User_model');
+		$this->load->model('Konten_model');
+		$this->load->model('Undang_model');
 	}
 
 	//function untuk menampilkan halaman home user
@@ -26,28 +28,19 @@ class Home extends CI_Controller
 	public function wawasan()
 	{
 		$data['user'] = $this->db->get_where('user', ['username' => $this->session->userdata('username')])->row_array();
-		$data['allkonten'] = $this->User_model->getAllKonten();
+		$data['allkonten'] = $this->Konten_model->getAllKonten();
 		$data['data'] = 'Wawasan';
 		$this->load->view('templates/user/header', $data);
 		$this->load->view('fitur/viewwawasan');
 		$this->load->view('templates/user/footer');
 	}
-	
-	//function untuk menampilkan halaman fitur wawasan user
-	public function wawasan()
-	{
-		$data['user'] = $this->db->get_where('user', ['username' => $this->session->userdata('username')])->row_array();
-		$data['data'] = 'Wawasan';
-		$this->load->view('templates/user/header', $data);
-		$this->load->view('fitur/viewwawasan');
-		$this->load->view('templates/user/footer');
-	}
+
 	// fungsi untuk menampilkan halaman fitur peraturan undang undang
 	public function peraturan()
 	{
 		$data['user'] = $this->db->get_where('user', ['username' => $this->session->userdata('username')])->row_array();
 		$data['data'] = 'Peraturan UU';
-		$data['alluud'] = $this->User_model->getAllUud();
+		$data['alluud'] = $this->Undang_model->getAllUud();
 		$this->load->view('templates/user/header', $data);
 		$this->load->view('fitur/viewperaturan');
 		$this->load->view('templates/user/footer');
