@@ -29,7 +29,7 @@
 						<i class="fab fa-facebook-square"></i>
 					</a>
 					<a target="_blank" href="#" class="btn btn-icon btn-neutral  btn-round btn-simple" data-toggle="tooltip" data-original-title="Follow us">
-						<i class="fab fa-dribbble"></i>
+						<i class="fab fa-instagram"></i>
 					</a>
 				</div>
 			</div>
