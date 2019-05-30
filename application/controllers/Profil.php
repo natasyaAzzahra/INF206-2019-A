@@ -133,13 +133,4 @@ class Profil extends CI_Controller
             redirect('profil/konten');
         }
     }
-
-    public function pencarian()
-    {
-        $keyword = $this->input->post('keyword');
-        $data['konten'] = $this->User_model->get_keyword($keyword);
-        $this->load->view('templates/user/header', $data);
-        $this->load->view('fitur/viewwawasan', $data);
-        $this->load->view('templates/user/footer');
-    }
 }
