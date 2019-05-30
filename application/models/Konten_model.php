@@ -96,4 +96,12 @@ class Konten_model extends CI_Model
         }
         redirect('profil/konten');
     }
+
+    //mengecek kata kunci yang ingin dicari pada database konten
+    public function cariDataKonten()
+    {
+        $keyword = $this->input->post('keyword');
+        $this->db->like('judul', $keyword);
+        return $this->db->get('konten')->result_array();
+    }
 }
