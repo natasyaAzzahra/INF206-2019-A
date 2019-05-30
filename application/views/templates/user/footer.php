@@ -25,10 +25,10 @@
 					<a target="_blank" href="https://twitter.com/NelayanBelajar?lang=en" class="btn btn-icon btn-neutral btn-round btn-simple" data-toggle="tooltip" data-original-title="Follow us">
 						<i class="fab fa-twitter"></i>
 					</a>
-					<a target="_blank" href="#" class="btn btn-icon btn-neutral btn-round btn-simple" data-toggle="tooltip" data-original-title="Like us">
+					<a target="_blank" href="https://web.facebook.com/Nelayan-Belajar-661496704277701/?modal=admin_todo_tour" class="btn btn-icon btn-neutral btn-round btn-simple" data-toggle="tooltip" data-original-title="Like us">
 						<i class="fab fa-facebook-square"></i>
 					</a>
-					<a target="_blank" href="#" class="btn btn-icon btn-neutral  btn-round btn-simple" data-toggle="tooltip" data-original-title="Follow us">
+					<a target="_blank" href="https://www.instagram.com/nelayanbelajar__/" class="btn btn-icon btn-neutral  btn-round btn-simple" data-toggle="tooltip" data-original-title="Follow us">
 						<i class="fab fa-instagram"></i>
 					</a>
 				</div>
