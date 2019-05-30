@@ -159,7 +159,7 @@
                     <h3 class="title">EMAIL & WEBSITE</h3>
                     <p>
                       <!--email aplikasi -->
-                      <i class="fa fa-envelope" aria-hidden="true"></i> &nbsp nelayanbelajar@gmail.com
+                      <i class="fa fa-envelope" aria-hidden="true"></i> &nbsp nelayanbelajara@gmail.com
                       <br>
                       <br>
                       <!-- website aplikasi -->
@@ -178,10 +178,10 @@
                   <div class="info">
                     <h3 class="title">KONTAK</h3>
                     <p>
-                      <i class="fa fa-mobile" aria-hidden="true"></i> &nbsp (+62)-82265111111
+                      <i class="fa fa-mobile" aria-hidden="true"></i> &nbsp (+62) 821 6030 4041
                       <br>
                       <br>
-                      <i class="fa fa-mobile" aria-hidden="true"></i> &nbsp (+62)-82379898988
+                      <i class="fa fa-mobile" aria-hidden="true"></i> &nbsp (+62) 822 7329 7050
                     </p>
                   </div>
                 </div>
@@ -196,7 +196,7 @@
                   <div class="info">
                     <h3 class="title">ALAMAT</h3>
                     <p>
-                      <i class="fa fa-map-marker" aria-hidden="true"></i> &nbsp Jl. Tgk. Hasan Krueng Kalee, Kopelma Darussalam, Syiah Kuala, Kota Banda Aceh, Aceh 23111
+                      <i class="fa fa-map-marker" aria-hidden="true"></i> &nbsp Kopelma Darussalam, Syiah Kuala, Kota Banda Aceh, Aceh 24415
                     </p>
                   </div>
                 </div>
