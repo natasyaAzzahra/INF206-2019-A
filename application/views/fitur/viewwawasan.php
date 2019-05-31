@@ -6,12 +6,19 @@
 			<div class="row justify-content-center pb-2 pt-2">
 				<h3 class="title">Daftar Konten</h3>
 			</div>
+			<?php if (empty($allkonten)) : ?>
+				<div class="row justify-content-center">
+					<div class="col-md-9">
+						<?= $this->session->flashdata('pesan'); ?>
+					</div>
+				</div>
+			<?php endif; ?>
 			<div class="row">
 				<?php foreach ($allkonten as $ak) : ?>
 					<div class="col-md-4">
 						<div class="card" style="width: 20rem;">
 							<img class="card-img-top" src="<?= base_url('assets/img/konten/' . $ak['image']); ?>" alt="Card image cap" width="250px" height="250px" style="padding:5px;">
-							<div class="card-body pb-0">
+							<div class="card-body pb-0" style="height:200px;">
 								<span class="card-text"><?= $ak['judul']; ?></span>
 								<br>
 								<small style="color:red;"><?= $ak['genre'] ?> / <?= date('d F Y', $ak['date_created']); ?></small>

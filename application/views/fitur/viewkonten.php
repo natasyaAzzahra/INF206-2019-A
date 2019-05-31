@@ -55,7 +55,7 @@
                                 <div class="col-md-4">
                                     <div class="card" style="width: 20rem;">
                                         <img class="card-img-top" src="<?= base_url('assets/img/konten/' . $uk['image']); ?>" alt="Card image cap" width="250px" height="250px" style="padding:5px;">
-                                        <div class="card-body pb-0">
+                                        <div class="card-body pb-0" style="height:150px;">
                                             <span class="card-text"><?= $uk['judul']; ?></span>
                                             <br>
                                             <small style="color:red;"><?= $uk['genre'] ?> / <?= date('d F Y', $uk['date_created']); ?></small>
